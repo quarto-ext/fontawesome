@@ -4,10 +4,3 @@ version: 0.0.1
 contributes:
   shortcodes:
     - shortcodes.lua
-  format:
-    pdf:
-      header-includes: |
-        \usepackage{fontawesome5}
-    html:
-      css:
-        assets/css/all.css
