@@ -12,7 +12,7 @@ From the command line, at the root directory of your quarto project:
 $ quarto install extension <path-to-unzipped-directory>
 ```
 
-For example, in an OS X machine:
+For example, in macOS:
 
 ```
 $ cd ~/Downloads
