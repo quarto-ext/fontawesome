@@ -4,23 +4,8 @@ This extension allows you to use [Font Awesome](https://fontawesome.com/) icons 
 
 ## Installation
 
-Download the [release file](https://github.com/quarto-ext/fontawesome/releases/tag/v0.0.1) and unzip it.
-
-From the command line, at the root directory of your quarto project:
-
 ```
-$ quarto install extension <path-to-unzipped-directory>
-```
-
-For example, in an OS X machine:
-
-```
-$ cd ~/Downloads
-$ tar xzvf fontawesome-0.0.1.tar.gz
-x fontawesome-0.0.1/
-   ... (more output from the tar command)
-$ cd PATH-TO-YOUR-QUARTO-PROJECT
-$ quarto install extension ~/Downloads/fontawesome-0.0.1/
+$ quarto install extension quarto-ext/fontawesome
 ```
 
 This will install the extension under the `_extensions` subdirectory.
