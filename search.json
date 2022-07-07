@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Font Awesome Quarto extension.",
+    "section": "",
+    "text": "{{< fa icon-name >}}\nFor example, use {{< fa thumbs-up >}} to get , or {{< fa folder >}} to get .\nIt also works in PDF documents."
+  }
+]
