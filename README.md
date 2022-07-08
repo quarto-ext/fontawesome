@@ -19,11 +19,9 @@ The extension provides the `fa` shortcode:
 {{< fa icon-name >}}
 ```
 
-Here is the source code for a minimal example: [example.qmd](example.qmd). Rendered versions of this example are at:
+Here is the source code for a minimal example: [example.qmd](example.qmd)
 
-- [HTML](https://quarto-ext.github.io/fontawesome/)
-
-- [PDF](https://quarto-ext.github.io/fontawesome/example.pdf)
+This is the output of `example.qmd` for [HTML](https://quarto-ext.github.io/fontawesome/) and [PDF](https://quarto-ext.github.io/fontawesome/example.pdf).
 
 
 # Known Issues
