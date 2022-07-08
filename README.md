@@ -5,7 +5,7 @@ This extension allows you to use [Font Awesome](https://fontawesome.com/) icons 
 ## Installing
 
 ```
-$ quarto install extension quarto-ext/fontawesome
+quarto install extension quarto-ext/fontawesome
 ```
 
 This will install the extension under the `_extensions` subdirectory.
