@@ -13,10 +13,11 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-The extension provides the `fa` shortcode:
+The extension provides the `fa` shortcode. For example:
 
 ```
-{{< fa icon-name >}}
+{{< fa thumbs-up >}} 
+{{< fa folder >}}
 ```
 
 Here is the source code for a minimal example: [example.qmd](example.qmd)
