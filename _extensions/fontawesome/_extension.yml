@@ -3,4 +3,4 @@ author: Carlos Scheidegger
 version: 0.0.1
 contributes:
   shortcodes:
-    - shortcodes.lua
+    - fontawesome.lua

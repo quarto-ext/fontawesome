@@ -1,4 +1,4 @@
-# Font Awesome extension for Quarto
+# Font Awesome Extension for Quarto
 
 This extension allows you to use [Font Awesome](https://fontawesome.com/) icons in your quarto documents. 
 
@@ -19,7 +19,12 @@ The extension provides the `fa` shortcode:
 {{< fa icon-name >}}
 ```
 
-See the source code of a [minimal example](index.qmd), or see it [live](https://quarto-ext.github.io/fontawesome/).
+Here is the source code for a minimal example: [example.qmd](example.qmd). Rendered versions of this example are at:
+
+- [HTML](https://quarto-ext.github.io/fontawesome/)
+
+- [PDF](https://quarto-ext.github.io/fontawesome/example.pdf)
+
 
 # Known Issues
 
