@@ -13,12 +13,17 @@ end
 return {
   ["fa"] = function(args, kwargs)
 
+    local group = "solid"
     local icon = pandoc.utils.stringify(args[1])
+    if #args > 1 then
+      group = icon
+      icon = pandoc.utils.stringify(args[2])
+    end
 
     -- detect html (excluding epub which won't handle fa)
     if quarto.doc.isFormat("html:js") then
       ensureHtmlDeps()
-      return pandoc.RawInline('html', "<i class=\"fa-solid fa-" .. icon .. "\"></i>")
+      return pandoc.RawInline('html', "<i class=\"fa-" .. group .. " fa-" .. icon .. "\"></i>")
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.isFormat("pdf") then
       ensureLatexDeps()

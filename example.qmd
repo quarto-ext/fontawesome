@@ -5,11 +5,17 @@ format:
    pdf: default
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides a shortcode `fa`:
+This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an `{{{< fa >}}}` shortcode:
 
-```markdown
+``` markdown
 {{{< fa icon-name >}}}
 ```
 
-For example, use `{{{< fa thumbs-up >}}}` to get {{< fa thumbs-up >}}, or `{{{< fa folder >}}}` to get {{< fa folder >}}.
+For example:
 
+| Shortcode                       | Icon                        |
+|---------------------------------|-----------------------------|
+| `{{{< fa thumbs-up >}}}`        | {{< fa thumbs-up >}}        |
+| `{{{< fa folder >}}}`           | {{< fa folder >}}           |
+| `{{{< fa chess-pawn >}}}`       | {{< fa chess-pawn >}}       |
+| `{{{< fa brands bluetooth >}}}` | {{< fa brands bluetooth >}} |
