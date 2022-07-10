@@ -91,7 +91,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="example_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="example_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link href="example_files/libs/fontawesome6-0.1.0/assets/css/all.css" rel="stylesheet">
+<link href="example_files/libs/fontawesome6-0.1.0/all.css" rel="stylesheet">
 
 
 </head>
@@ -118,9 +118,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides a shortcode <code>fa</code>:</p>
+<p>This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an <code>{{&lt; fa &gt;}}</code> shortcode:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa icon-name &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For example, use <code>{{&lt; fa thumbs-up &gt;}}</code> to get <i class="fa-solid fa-thumbs-up"></i>, or <code>{{&lt; fa folder &gt;}}</code> to get <i class="fa-solid fa-folder"></i>.</p>
+<p>For example:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Shortcode</th>
+<th>Icon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>{{&lt; fa thumbs-up &gt;}}</code></td>
+<td><p><i class="fa-solid fa-thumbs-up"></i></p></td>
+</tr>
+<tr class="even">
+<td><code>{{&lt; fa folder &gt;}}</code></td>
+<td><p><i class="fa-solid fa-folder"></i></p></td>
+</tr>
+<tr class="odd">
+<td><code>{{&lt; fa chess-pawn &gt;}}</code></td>
+<td><p><i class="fa-solid fa-chess-pawn"></i></p></td>
+</tr>
+<tr class="even">
+<td><code>{{&lt; fa brands bluetooth &gt;}}</code></td>
+<td><p><i class="fa-brands fa-bluetooth"></i></p></td>
+</tr>
+</tbody>
+</table>
 
 </main>
 <!-- /main column -->
