@@ -13,13 +13,13 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-To embed an icon, use the `{{{< fa >}}}` shortcode. For example:
+To embed an icon, use the `{{< fa >}}` shortcode. For example:
 
 ```
 {{< fa thumbs-up >}} 
 {{< fa folder >}}
-{{< fa chess-pawn }}
-{{{< fa brands bluetooth }}}
+{{< fa chess-pawn >}}
+{{< fa brands bluetooth >}}
 ```
 
 This extension includes support for only free Font Awesome icons (there are roughly 2,000 free icons, while the complete set of Pro icons consists of more than 16,000). You can browse all of the available free icons here:
@@ -37,7 +37,7 @@ Note that there is a `brands` prefix used within the `bluetooth` example above. 
 The `fa-brands` indicates that the icon is in the `brands` collection. To use this with Quarto just add the `brands` collection prefix as follows:
 
 ```default
-{{{< fa brands github }}}
+{{< fa brands github >}}
 ```
 
 ## Example
