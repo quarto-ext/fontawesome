@@ -13,9 +13,9 @@ It provides an `{{{< fa >}}}` shortcode:
   {{{< fa <icon-name> >}}}
   ```
 
-- Optional `<group>` and `<size>`:
+- Optional `<group>`, `<size=...>`, and `<title=...>`:
   ``` markdown
-  {{{< fa <group> <icon-name> <size> >}}}
+  {{{< fa <group> <icon-name> <size=...> <title=...> >}}}
   ```
 
 For example:
