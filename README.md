@@ -13,13 +13,17 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-To embed an icon, use the `{{< fa >}}` shortcode. For example:
+To embed an icon, use the `{{< fa >}}` shortcode.
+For example:
 
 ```default
 {{< fa thumbs-up >}} 
 {{< fa folder >}}
 {{< fa chess-pawn }}
 {{< fa brands bluetooth >}}
+{{< fa brands twitter size=2xl >}}
+{{< fa brands github size=5x >}}
+{{< fa enveloppe title="An enveloppe" >}}
 ```
 
 This extension includes support for only free Font Awesome icons (there are roughly 2,000 free icons, while the complete set of Pro icons consists of more than 16,000).
