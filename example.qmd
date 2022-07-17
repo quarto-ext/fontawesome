@@ -26,5 +26,5 @@ For example:
 | `{{{< fa folder >}}}`               | {{< fa folder >}}               |
 | `{{{< fa chess-pawn >}}}`           | {{< fa chess-pawn >}}           |
 | `{{{< fa brands bluetooth >}}}`     | {{< fa brands bluetooth >}}     |
-| `{{{< fa brands twitter 2xl >}}}`   | {{< fa brands twitter 2xl >}}   |
-| `{{{< fa brands github 5x >}}}`     | {{< fa brands github 5x >}}     |
+| `{{{< fa brands twitter size=2xl >}}}`   | {{< fa brands twitter size=2xl >}}   |
+| `{{{< fa brands github size=5x >}}}`     | {{< fa brands github size=5x >}}     |

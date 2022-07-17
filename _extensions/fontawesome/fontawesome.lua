@@ -19,10 +19,7 @@ return {
       group = icon
       icon = pandoc.utils.stringify(args[2])
     end
-    local size = ""
-    if #args > 2 then
-      size = " fa-" .. pandoc.utils.stringify(args[3])
-    end
+    local size = " fa-" .. pandoc.utils.stringify(kwargs["size"])
 
     -- detect html (excluding epub which won't handle fa)
     if quarto.doc.isFormat("html:js") then

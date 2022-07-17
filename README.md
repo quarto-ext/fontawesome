@@ -49,7 +49,7 @@ The `fa-brands` indicates that the icon is in the `brands` collection. To use th
 
 Font Awesome provides relative and literal sizing for icons as described in <https://fontawesome.com/docs/web/style/size>.
 
-- Relative sizing: `{{< fa brands github 2xl >}}`
+- Relative sizing: `{{< fa brands github size=2xl >}}`
 
   | Relative Sizing Class | Font Size | Equivalent in Pixels |
   |-----------------------|-----------|----------------------|
@@ -60,7 +60,7 @@ Font Awesome provides relative and literal sizing for icons as described in <htt
   | fa-xl                 | 1.5em     | 24px                 |
   | fa-2xl                | 2em       | 32px                 |
 
-- Literal sizing: `{{< fa brands github 5x >}}`
+- Literal sizing: `{{< fa brands github size=5x >}}`
 
   | Literal Sizing Class | Font Size |
   |----------------------|-----------|
