@@ -79,6 +79,23 @@ Font Awesome provides relative and literal sizing for icons as described in <htt
   | fa-9x                | 9em       |
   | fa-10x               | 10em      |
 
+#### Accessibility
+
+If the icon is being used in place of some text,
+just add some descriptive text in the title argument:
+
+```default
+{{< fa envelope title="An envelope" >}}
+```
+
+This will produce the following HTML:
+
+```html
+<i class="fa-solid fa-envelope" title="An envelope" aria-hidden="true"></i>
+```
+
+More details on Font Awesome accessibility at <https://fontawesome.com/docs/web/dig-deeper/accessibility>.
+
 ## Example
 
 Here is the source code for a minimal example: [example.qmd](example.qmd).
