@@ -23,7 +23,7 @@ For example:
 {{< fa brands bluetooth >}}
 {{< fa brands twitter size=2xl >}}
 {{< fa brands github size=5x >}}
-{{< fa enveloppe title="An enveloppe" >}}
+{{< fa envelope title="An envelope" >}}
 ```
 
 This extension includes support for only free Font Awesome icons (there are roughly 2,000 free icons, while the complete set of Pro icons consists of more than 16,000).

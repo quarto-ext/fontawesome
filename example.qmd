@@ -28,4 +28,4 @@ For example:
 | `{{{< fa brands bluetooth >}}}`               | {{< fa brands bluetooth >}}               |
 | `{{{< fa brands twitter size=2xl >}}}`        | {{< fa brands twitter size=2xl >}}        |
 | `{{{< fa brands github size=5x >}}}`          | {{< fa brands github size=5x >}}          |
-| `{{{< fa enveloppe title="An enveloppe" >}}}` | {{< fa enveloppe title="An enveloppe" >}} |
+| `{{{< fa envelope title="An envelope" >}}}` | {{< fa envelope title="An envelope" >}} |
