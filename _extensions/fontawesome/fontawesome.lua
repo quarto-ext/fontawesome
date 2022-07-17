@@ -19,11 +19,15 @@ return {
       group = icon
       icon = pandoc.utils.stringify(args[2])
     end
+    local size = ""
+    if #args > 2 then
+      size = " fa-" .. pandoc.utils.stringify(args[3])
+    end
 
     -- detect html (excluding epub which won't handle fa)
     if quarto.doc.isFormat("html:js") then
       ensureHtmlDeps()
-      return pandoc.RawInline('html', "<i class=\"fa-" .. group .. " fa-" .. icon .. "\"></i>")
+      return pandoc.RawInline('html', "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"></i>")
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.isFormat("pdf") then
       ensureLatexDeps()

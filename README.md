@@ -22,13 +22,18 @@ To embed an icon, use the `{{< fa >}}` shortcode. For example:
 {{< fa brands bluetooth >}}
 ```
 
-This extension includes support for only free Font Awesome icons (there are roughly 2,000 free icons, while the complete set of Pro icons consists of more than 16,000). You can browse all of the available free icons here:
+This extension includes support for only free Font Awesome icons (there are roughly 2,000 free icons, while the complete set of Pro icons consists of more than 16,000).
+You can browse all of the available free icons here:
 
 <https://fontawesome.com/search?m=free>
 
-### Brands
+### HTML formats
 
-Note that there is a `brands` prefix used within the `bluetooth` example above. If you choose an icon from the `brands` collection, you will need to add a `brands` collection specifier. For example, if you search the free icons for "github" and then click on the `github` icon, you'll see this as the suggested HTML to embed the icon:
+#### Brands
+
+Note that there is a `brands` prefix used within the `bluetooth` example above.
+If you choose an icon from the `brands` collection, you will need to add a `brands` collection specifier when using any HTML format.
+For example, if you search the free icons for "github" and then click on the `github` icon, you'll see this as the suggested HTML to embed the icon:
 
 ```html
 <i class="fa-brands fa-github"></i>
@@ -39,6 +44,36 @@ The `fa-brands` indicates that the icon is in the `brands` collection. To use th
 ```default
 {{< fa brands github }}
 ```
+
+#### Sizing Icons
+
+Font Awesome provides relative and literal sizing for icons as described in <https://fontawesome.com/docs/web/style/size>.
+
+- Relative sizing: `{{< fa brands github 2xl >}}`
+
+  | Relative Sizing Class | Font Size | Equivalent in Pixels |
+  |-----------------------|-----------|----------------------|
+  | fa-2xs                | 0.625em   | 10px                 |
+  | fa-xs                 | 0.75em    | 12px                 |
+  | fa-sm                 | 0.875em   | 14px                 |
+  | fa-lg                 | 1.25em    | 20px                 |
+  | fa-xl                 | 1.5em     | 24px                 |
+  | fa-2xl                | 2em       | 32px                 |
+
+- Literal sizing: `{{< fa brands github 5x >}}`
+
+  | Literal Sizing Class | Font Size |
+  |----------------------|-----------|
+  | fa-1x                | 1em       |
+  | fa-2x                | 2em       |
+  | fa-3x                | 3em       |
+  | fa-4x                | 4em       |
+  | fa-5x                | 5em       |
+  | fa-6x                | 6em       |
+  | fa-7x                | 7em       |
+  | fa-8x                | 8em       |
+  | fa-9x                | 9em       |
+  | fa-10x               | 10em      |
 
 ## Example
 
