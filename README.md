@@ -15,7 +15,7 @@ If you're using version control, you will want to check in this directory.
 
 To embed an icon, use the `{{< fa >}}` shortcode. For example:
 
-```
+```default
 {{< fa thumbs-up >}} 
 {{< fa folder >}}
 {{< fa chess-pawn }}
