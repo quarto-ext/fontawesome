@@ -32,7 +32,7 @@ local function isValidSize(size)
       return size
     end
   end
-  return "normalsize"
+  return ""
 end
 
 return {
@@ -65,10 +65,10 @@ return {
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.isFormat("pdf") then
       ensureLatexDeps()
-      if isEmpty(size) then
+      if isEmpty(isValidSize(size)) then
         return pandoc.RawInline('tex', "\\faIcon{" .. icon .. "}")
       else
-        return pandoc.RawInline('tex', "\\" .. isValidSize(size) .. "{\\faIcon{" .. icon .. "}}")
+        return pandoc.RawInline('tex', "\\" .. size .. "{\\faIcon{" .. icon .. "}}")
       end
     else
       return pandoc.Null()
