@@ -80,18 +80,18 @@ When the size is invalid, no size changes are made.
 
 - LaTeX sizing: `{{< fa battery-half size=Huge >}}`.
 
-  | Sizing Command   | Font Size (LaTeX)    | Font Size (HTML) |
-  | ---------------- | -------------------- | ---------------- |
-  | `\tiny`          | 5pt                  | 0.5em            |
-  | `\scriptsize`    | 7pt                  | 0.7em            |
-  | `\footnotesize`  | 8pt                  | 0.8em            |
-  | `\small`         | 9pt                  | 0.9em            |
-  | `\normalsize`    | 10pt (document size) | 1em              |
-  | `\large`         | 12pt                 | 1.25em           |
-  | `\Large`         | 14.4pt               | 1.5em            |
-  | `\LARGE`         | 17.28pt              | 1.75em           |
-  | `\huge`          | 20.74pt              | 2em              |
-  | `\Huge`          | 24.88pt              | 2.5em            |
+  | Sizing Command                  | Font Size (LaTeX)    | Font Size (HTML) |
+  | ------------------------------- | -------------------- | ---------------- |
+  | tiny (= `\tiny`)                 | 5pt                  | 0.5em            |
+  | scriptsize (= `\scriptsize`)     | 7pt                  | 0.7em            |
+  | footnotesize (= `\footnotesize`) | 8pt                  | 0.8em            |
+  | small (= `\small`)               | 9pt                  | 0.9em            |
+  | normalsize (= `\normalsize`)     | 10pt (document size) | 1em              |
+  | large (= `\large`)               | 12pt                 | 1.25em           |
+  | Large (= `\Large`)               | 14.4pt               | 1.5em            |
+  | LARGE (= `\LARGE`)               | 17.28pt              | 1.75em           |
+  | huge (= `\huge`)                 | 20.74pt              | 2em              |
+  | Huge (= `\Huge`)                 | 24.88pt              | 2.5em            |
 
 ### Accessibility[^1]
 
