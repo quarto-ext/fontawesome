@@ -68,7 +68,7 @@ return {
       if isEmpty(isValidSize(size)) then
         return pandoc.RawInline('tex', "\\faIcon{" .. icon .. "}")
       else
-        return pandoc.RawInline('tex', "\\" .. size .. "{\\faIcon{" .. icon .. "}}")
+        return pandoc.RawInline('tex', "{\\" .. size .. "\\faIcon{" .. icon .. "}}")
       end
     else
       return pandoc.Null()
