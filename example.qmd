@@ -20,12 +20,13 @@ It provides an `{{{< fa >}}}` shortcode:
 
 For example:
 
-| Shortcode                                     | Icon                                      |
-|-----------------------------------------------|-------------------------------------------|
-| `{{{< fa thumbs-up >}}}`                      | {{< fa thumbs-up >}}                      |
-| `{{{< fa folder >}}}`                         | {{< fa folder >}}                         |
-| `{{{< fa chess-pawn >}}}`                     | {{< fa chess-pawn >}}                     |
-| `{{{< fa brands bluetooth >}}}`               | {{< fa brands bluetooth >}}               |
-| `{{{< fa brands twitter size=2xl >}}}`        | {{< fa brands twitter size=2xl >}}        |
-| `{{{< fa brands github size=5x >}}}`          | {{< fa brands github size=5x >}}          |
-| `{{{< fa envelope title="An envelope" >}}}`   | {{< fa envelope title="An envelope" >}}   |
+| Shortcode                                      | Icon                                      |
+|------------------------------------------------|-------------------------------------------|
+| `{{{< fa thumbs-up >}}}`                       | {{< fa thumbs-up >}}                      |
+| `{{{< fa folder >}}}`                          | {{< fa folder >}}                         |
+| `{{{< fa chess-pawn >}}}`                      | {{< fa chess-pawn >}}                     |
+| `{{{< fa brands bluetooth >}}}`                | {{< fa brands bluetooth >}}               |
+| `{{{< fa brands twitter size=2xl >}}}` (HTML)  | {{< fa brands twitter size=2xl >}}        |
+| `{{{< fa brands github size=5x >}}}` (HTML     | {{< fa brands github size=5x >}}          |
+| `{{{< fa brands github size=Huge >}}}` (LaTeX) | {{< fa brands github size=Huge >}}        |
+| `{{{< fa envelope title="An envelope" >}}}`    | {{< fa envelope title="An envelope" >}}   |
