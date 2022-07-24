@@ -84,18 +84,18 @@ When the size is invalid, no size changes are made.
 LaTex sizing for icons works using the regular LaTeX commands for font size, `{{< fa brands github size=Huge >}}`.  
 When the size is invalid, no size changes are made.
 
-| Sizing Command | Font Size            |
-| -------------- | -------------------- |
-| \tiny          | 5pt                  |
-| \scriptsize    | 7pt                  |
-| \footnotesize  | 8pt                  |
-| \small         | 9pt                  |
-| \normalsize    | 10pt (document size) |
-| \large         | 12pt                 |
-| \Large         | 14.4pt               |
-| \LARGE         | 17.28pt              |
-| \huge          | 20.74pt              |
-| \Huge          | 24.88pt              |
+| Sizing Command   | Font Size            |
+| ---------------- | -------------------- |
+| `\tiny`          | 5pt                  |
+| `\scriptsize`    | 7pt                  |
+| `\footnotesize`  | 8pt                  |
+| `\small`         | 9pt                  |
+| `\normalsize`    | 10pt (document size) |
+| `\large`         | 12pt                 |
+| `\Large`         | 14.4pt               |
+| `\LARGE`         | 17.28pt              |
+| `\huge`          | 20.74pt              |
+| `\Huge`          | 24.88pt              |
 
 ### Accessibility (HTML)
 
