@@ -47,7 +47,7 @@ return {
     
     local title = pandoc.utils.stringify(kwargs["title"])
     if not isEmpty(title) then
-      title = " title=\"" .. title  .. "\" aria-hidden=\"true\""
+      title = " title=\"" .. title  .. "\""
     end
 
     local size = pandoc.utils.stringify(kwargs["size"])
@@ -60,7 +60,7 @@ return {
       end
       return pandoc.RawInline(
         'html',
-        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. "></i>"
+        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. " aria-hidden=\"true\"></i>"
       )
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.isFormat("pdf") then
