@@ -6,7 +6,7 @@ local function ensureHtmlDeps()
   quarto.doc.addHtmlDependency({
     name = 'fontawesome6',
     version = '0.1.0',
-    stylesheets = {'assets/css/all.css'}
+    stylesheets = {'assets/css/all.css', 'assets/css/latex-fontsize.css'}
   })
 end
 
