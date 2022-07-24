@@ -30,7 +30,7 @@ You can browse all of the available free icons here:
 
 <https://fontawesome.com/search?m=free>
 
-### Brands (HTML)
+### Brands[^1]
 
 Note that there is a `brands` prefix used within the `bluetooth` example above.
 If you choose an icon from the `brands` collection, you will need to add a `brands` collection specifier when using any HTML format.
@@ -48,12 +48,10 @@ The `fa-brands` indicates that the icon is in the `brands` collection. To use th
 
 ### Sizing Icons
 
-#### HTML formats
-
 Font Awesome provides relative and literal sizing for icons as described in <https://fontawesome.com/docs/web/style/size>.  
 When the size is invalid, no size changes are made.
 
-- Relative sizing: `{{< fa brands github size=2xl >}}`.
+- Relative sizing[^1]: `{{< fa brands github size=2xl >}}`.
 
   | Relative Sizing Class | Font Size | Equivalent in Pixels |
   |-----------------------|-----------|----------------------|
@@ -64,7 +62,7 @@ When the size is invalid, no size changes are made.
   | fa-xl                 | 1.5em     | 24px                 |
   | fa-2xl                | 2em       | 32px                 |
 
-- Literal sizing: `{{< fa brands github size=5x >}}`.
+- Literal sizing[^1]: `{{< fa brands github size=5x >}}`.
 
   | Literal Sizing Class | Font Size |
   |----------------------|-----------|
@@ -79,25 +77,22 @@ When the size is invalid, no size changes are made.
   | fa-9x                | 9em       |
   | fa-10x               | 10em      |
 
-#### LaTeX formats
+- LaTeX sizing: `{{< fa brands github size=Huge >}}`.
 
-LaTex sizing for icons works using the regular LaTeX commands for font size, `{{< fa brands github size=Huge >}}`.  
-When the size is invalid, no size changes are made.
+  | Sizing Command   | Font Size (LaTeX)    | Font Size (HTML) |
+  | ---------------- | -------------------- | ---------------- |
+  | `\tiny`          | 5pt                  | 0.5em            |
+  | `\scriptsize`    | 7pt                  | 0.7em            |
+  | `\footnotesize`  | 8pt                  | 0.8em            |
+  | `\small`         | 9pt                  | 0.9em            |
+  | `\normalsize`    | 10pt (document size) | 1em              |
+  | `\large`         | 12pt                 | 1.25em           |
+  | `\Large`         | 14.4pt               | 1.5em            |
+  | `\LARGE`         | 17.28pt              | 1.75em           |
+  | `\huge`          | 20.74pt              | 2em              |
+  | `\Huge`          | 24.88pt              | 2.5em            |
 
-| Sizing Command   | Font Size            |
-| ---------------- | -------------------- |
-| `\tiny`          | 5pt                  |
-| `\scriptsize`    | 7pt                  |
-| `\footnotesize`  | 8pt                  |
-| `\small`         | 9pt                  |
-| `\normalsize`    | 10pt (document size) |
-| `\large`         | 12pt                 |
-| `\Large`         | 14.4pt               |
-| `\LARGE`         | 17.28pt              |
-| `\huge`          | 20.74pt              |
-| `\Huge`          | 24.88pt              |
-
-### Accessibility (HTML)
+### Accessibility[^1]
 
 If the icon is being used in place of some text,
 just add some descriptive text in the title argument:
@@ -113,6 +108,8 @@ This will produce the following HTML:
 ```
 
 More details on Font Awesome accessibility at <https://fontawesome.com/docs/web/dig-deeper/accessibility>.
+
+[^1]: HTML format only.
 
 ## Example
 
