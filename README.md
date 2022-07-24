@@ -13,13 +13,12 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-To embed an icon, use the `{{< fa >}}` shortcode.
-For example:
+To embed an icon, use the `{{< fa >}}` shortcode. For example:
 
 ```default
 {{< fa thumbs-up >}} 
 {{< fa folder >}}
-{{< fa chess-pawn }}
+{{< fa chess-pawn >}}
 {{< fa brands bluetooth >}}
 {{< fa brands twitter size=2xl >}}
 {{< fa brands github size=5x >}}
@@ -46,7 +45,7 @@ For example, if you search the free icons for "github" and then click on the `gi
 The `fa-brands` indicates that the icon is in the `brands` collection. To use this with Quarto just add the `brands` collection prefix as follows:
 
 ```default
-{{< fa brands github }}
+{{< fa brands github >}}
 ```
 
 #### Sizing Icons
