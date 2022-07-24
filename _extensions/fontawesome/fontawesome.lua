@@ -10,7 +10,7 @@ function ensureHtmlDeps()
   })
 end
 
-local function isempty(s)
+local function isEmpty(s)
   return s == nil or s == ''
 end
 
