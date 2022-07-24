@@ -22,6 +22,7 @@ To embed an icon, use the `{{< fa >}}` shortcode. For example:
 {{< fa brands bluetooth >}}
 {{< fa brands twitter size=2xl >}}
 {{< fa brands github size=5x >}}
+{{< fa battery-half size=Huge >}}
 {{< fa envelope title="An envelope" >}}
 ```
 
@@ -51,7 +52,7 @@ The `fa-brands` indicates that the icon is in the `brands` collection. To use th
 Font Awesome provides relative and literal sizing for icons as described in <https://fontawesome.com/docs/web/style/size>.  
 When the size is invalid, no size changes are made.
 
-- Relative sizing[^1]: `{{< fa brands github size=2xl >}}`.
+- Relative sizing[^1]: `{{< fa battery-half size=2xl >}}`.
 
   | Relative Sizing Class | Font Size | Equivalent in Pixels |
   |-----------------------|-----------|----------------------|
@@ -62,7 +63,7 @@ When the size is invalid, no size changes are made.
   | fa-xl                 | 1.5em     | 24px                 |
   | fa-2xl                | 2em       | 32px                 |
 
-- Literal sizing[^1]: `{{< fa brands github size=5x >}}`.
+- Literal sizing[^1]: `{{< fa battery-half size=5x >}}`.
 
   | Literal Sizing Class | Font Size |
   |----------------------|-----------|
@@ -77,7 +78,7 @@ When the size is invalid, no size changes are made.
   | fa-9x                | 9em       |
   | fa-10x               | 10em      |
 
-- LaTeX sizing: `{{< fa brands github size=Huge >}}`.
+- LaTeX sizing: `{{< fa battery-half size=Huge >}}`.
 
   | Sizing Command   | Font Size (LaTeX)    | Font Size (HTML) |
   | ---------------- | -------------------- | ---------------- |
@@ -109,7 +110,7 @@ This will produce the following HTML:
 
 More details on Font Awesome accessibility at <https://fontawesome.com/docs/web/dig-deeper/accessibility>.
 
-[^1]: HTML format only.
+[^1]: HTML formats only.
 
 ## Example
 

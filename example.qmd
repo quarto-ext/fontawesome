@@ -28,5 +28,5 @@ For example:
 | `{{{< fa brands bluetooth >}}}`                    | {{< fa brands bluetooth >}}               |
 | `{{{< fa brands twitter size=2xl >}}}` (HTML only) | {{< fa brands twitter size=2xl >}}        |
 | `{{{< fa brands github size=5x >}}}` (HTML only)   | {{< fa brands github size=5x >}}          |
-| `{{{< fa brands github size=Huge >}}}`             | {{< fa brands github size=Huge >}}        |
+| `{{{< fa battery-half size=Huge >}}}`              | {{< fa battery-half size=Huge >}}         |
 | `{{{< fa envelope title="An envelope" >}}}`        | {{< fa envelope title="An envelope" >}}   |
