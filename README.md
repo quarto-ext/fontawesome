@@ -48,7 +48,7 @@ The `fa-brands` indicates that the icon is in the `brands` collection. To use th
 
 ### Sizing Icons
 
-### HTML formats
+#### HTML formats
 
 Font Awesome provides relative and literal sizing for icons as described in <https://fontawesome.com/docs/web/style/size>.  
 When the size is invalid, no size changes are made.
@@ -79,7 +79,7 @@ When the size is invalid, no size changes are made.
   | fa-9x                | 9em       |
   | fa-10x               | 10em      |
 
-### LaTeX formats
+#### LaTeX formats
 
 LaTex sizing for icons works using the regular LaTeX commands for font size, `{{< fa brands github size=Huge >}}`.  
 When the size is invalid, no size changes are made.
