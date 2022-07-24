@@ -80,8 +80,8 @@ When the size is invalid, no size changes are made.
 
 - LaTeX sizing: `{{< fa battery-half size=Huge >}}`.
 
-  | Sizing Command                  | Font Size (LaTeX)    | Font Size (HTML) |
-  | ------------------------------- | -------------------- | ---------------- |
+  | Sizing Command                   | Font Size (LaTeX)    | Font Size (HTML) |
+  | -------------------------------- | -------------------- | ---------------- |
   | tiny (= `\tiny`)                 | 5pt                  | 0.5em            |
   | scriptsize (= `\scriptsize`)     | 7pt                  | 0.7em            |
   | footnotesize (= `\footnotesize`) | 8pt                  | 0.8em            |
