@@ -60,7 +60,7 @@ return {
       end
       return pandoc.RawInline(
         'html',
-        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. " aria-hidden=\"true\"></i>"
+        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. "></i>"
       )
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.isFormat("pdf") then
