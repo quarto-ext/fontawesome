@@ -50,6 +50,13 @@ return {
       title = " title=\"" .. title  .. "\""
     end
 
+    local label = pandoc.utils.stringify(kwargs["label"])
+    if isEmpty(label) then
+      label = " aria-label=\"" .. icon  .. "\""
+    else
+      label = " aria-label=\"" .. label  .. "\""
+    end
+
     local size = pandoc.utils.stringify(kwargs["size"])
     
     -- detect html (excluding epub which won't handle fa)
@@ -60,7 +67,7 @@ return {
       end
       return pandoc.RawInline(
         'html',
-        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. " aria-hidden=\"true\"></i>"
+        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. label .. "></i>"
       )
     -- detect pdf / beamer / latex / etc
     elseif quarto.doc.is_format("pdf") then
