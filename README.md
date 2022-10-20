@@ -11,6 +11,8 @@ quarto install extension quarto-ext/fontawesome
 This will install the extension under the `_extensions` subdirectory.
 If you're using version control, you will want to check in this directory.
 
+Do note that this extension requires quarto 1.2.198 or higher. We strongly recommend you ensure you're running a recent version of quarto, and download/install one [from the download page](https://quarto.org/docs/download/) if needed.
+
 ## Using
 
 To embed an icon, use the `{{< fa >}}` shortcode. For example:
