@@ -5,7 +5,7 @@ This extension provides support including free icons provided by [Font Awesome](
 ## Installing
 
 ```sh
-quarto install extension quarto-ext/fontawesome
+quarto add quarto-ext/fontawesome
 ```
 
 This will install the extension under the `_extensions` subdirectory.
