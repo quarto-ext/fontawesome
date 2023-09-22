@@ -30,3 +30,9 @@ For example:
 | `{{{< fa brands github size=5x >}}}` (HTML only)   | {{< fa brands github size=5x >}}          |
 | `{{{< fa battery-half size=Huge >}}}`              | {{< fa battery-half size=Huge >}}         |
 | `{{{< fa envelope title="An envelope" >}}}`        | {{< fa envelope title="An envelope" >}}   |
+
+Note that the icon sets are currently not perfectly interchangeable across formats:
+
+- `html` uses FontAwesome 6.4.2
+- `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
+- Other formats are currently not supported, but PRs are always welcome!
