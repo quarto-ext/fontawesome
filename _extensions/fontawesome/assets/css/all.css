@@ -484,6 +484,36 @@
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
+.fa-0::before {
+  content: "\30"; }
+
+.fa-1::before {
+  content: "\31"; }
+
+.fa-2::before {
+  content: "\32"; }
+
+.fa-3::before {
+  content: "\33"; }
+
+.fa-4::before {
+  content: "\34"; }
+
+.fa-5::before {
+  content: "\35"; }
+
+.fa-6::before {
+  content: "\36"; }
+
+.fa-7::before {
+  content: "\37"; }
+
+.fa-8::before {
+  content: "\38"; }
+
+.fa-9::before {
+  content: "\39"; }
+
 .fa-a::before{ 
 content: "\41";
 }
