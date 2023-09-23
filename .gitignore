@@ -3,3 +3,4 @@
 *.pdf
 *_files/
 /.luarc.json
+.DS_Store
