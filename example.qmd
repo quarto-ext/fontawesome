@@ -31,6 +31,15 @@ For example:
 | `{{{< fa battery-half size=Huge >}}}`              | {{< fa battery-half size=Huge >}}         |
 | `{{{< fa envelope title="An envelope" >}}}`        | {{< fa envelope title="An envelope" >}}   |
 
+Colors:
+
+| Shortcode                                               | Icon                                                |
+| ------------------------------------------------------- | --------------------------------------------------- |
+| `{{{< fa thumbs-up color=#0000ff >}}}`                  | {{< fa thumbs-up color=#0000ff >}}                  |
+| `{{{< fa thumbs-up color=rgb(0,255,0) >}}}`             | {{< fa thumbs-up color=rgb(0,255,0) >}}             |
+| `{{{< fa thumbs-up color=rgb(1,0,0) >}}}`               | {{< fa thumbs-up color=rgb(1,0,0) >}}               |
+| `{{{< fa thumbs-up color=rgb(1,0.1,0.8) size=Huge >}}}` | {{< fa thumbs-up color=rgb(1,0.1,0.8) size=Huge >}} |
+
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
 - `html` uses FontAwesome 6.4.2
