@@ -85,12 +85,13 @@ return {
       else
         return pandoc.RawInline('tex', "{\\" .. size .. "\\faIcon{" .. icon .. "}}")
       end
+    -- detect typst
     elseif quarto.doc.is_format("typst") then
       ensure_typst_font_awesome()
-      if isEmpty(isValidSize(size)) then
+      if isEmpty(size) then
         return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\")")
       else
-        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\", size: ", size, ")")
+        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\", size: " .. size .. ")")
       end
     else
       return pandoc.Null()
