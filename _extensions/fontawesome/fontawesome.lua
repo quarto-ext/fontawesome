@@ -10,6 +10,14 @@ local function ensureHtmlDeps()
   })
 end
 
+local function ensure_typst_font_awesome()
+  if included_font_awesome then
+    return
+  end
+  included_font_awesome = true
+  quarto.doc.include_text("in-header", "#import \"@preview/fontawesome:0.1.0\": *")
+end
+
 local function isEmpty(s)
   return s == nil or s == ''
 end
@@ -81,6 +89,13 @@ return {
         return pandoc.RawInline('tex', icons)
       else
         return pandoc.RawInline('tex', "{\\" .. size .. icons .. "}")
+      end
+    elseif quarto.doc.is_format("typst") then
+      ensure_typst_font_awesome()
+      if isEmpty(isValidSize(size)) then
+        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\")")
+      else
+        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\", size: ", size, ")")
       end
     else
       return pandoc.Null()
