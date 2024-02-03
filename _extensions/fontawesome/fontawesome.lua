@@ -43,6 +43,33 @@ local function isValidSize(size)
   return ""
 end
 
+local function convert_fa_relative_size(size)
+  local validSizes = {
+    "2xs",
+    "xs",
+    "sm",
+    "lg",
+    "xl",
+    "2xl"
+  }
+  
+  local relativeSizes = {
+    "0.625em",
+    "0.75em",
+    "0.875em",
+    "1.25em",
+    "1.5em",
+    "2em"
+  }
+  
+  for i, v in ipairs(validSizes) do
+    if v == size then
+      return relativeSizes[i]
+    end
+  end
+  return size
+end
+
 return {
   ["fa"] = function(args, kwargs)
 
@@ -88,10 +115,27 @@ return {
     -- detect typst
     elseif quarto.doc.is_format("typst") then
       ensure_typst_font_awesome()
-      if isEmpty(size) then
-        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\")")
+      
+      local fill = pandoc.utils.stringify(kwargs["fill"])
+      if not isEmpty(fill) then
+        fill = ", fill: " .. fill
+      end
+      
+      if not isEmpty(size) then
+        size = convert_fa_relative_size(size)
+        size = ", size: " .. size
+      end
+      
+      if group == "brands" then
+        return pandoc.RawInline(
+          'typst',
+          "#fa-icon(\"" .. icon .. "\", fa-set: \"Brands\"" .. size .. fill .. ")"
+          )
       else
-        return pandoc.RawInline('typst', "#fa-icon(\"" .. icon .. "\", size: " .. size .. ")")
+        return pandoc.RawInline(
+            'typst',
+            "#fa-icon(\"" .. icon .. "\"" .. size .. fill .. ")"
+            )
       end
     else
       return pandoc.Null()

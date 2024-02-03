@@ -5,7 +5,7 @@ format:
    pdf: default
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents.
+This extension allows you to use font-awesome icons in your Quarto HTML and PDF LaTeX and Typst documents.
 It provides an `{{{< fa >}}}` shortcode:
 
 - Mandatory `<icon-name>`:
@@ -35,4 +35,5 @@ Note that the icon sets are currently not perfectly interchangeable across forma
 
 - `html` uses FontAwesome 6.4.2
 - `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
+- `typst` uses the `typst-fontawesome` package
 - Other formats are currently not supported, but PRs are always welcome!
