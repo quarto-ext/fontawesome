@@ -136,14 +136,14 @@ return {
     elseif quarto.doc.is_format("typst") then
       ensure_typst_font_awesome()
       
-      local fill = pandoc.utils.stringify(kwargs["fill"])
+      local color = pandoc.utils.stringify(kwargs["color"])
       if not isEmpty(size) then
         size = convert_fa_relative_size(size)
         size = "size: " .. size
       end
       
-      if not isEmpty(fill) then
-        fill = "fill: " .. fill
+      if not isEmpty(color) then
+        color = "fill: " .. color
         
         if not isEmpty(size) then
           size = size .. ", "
@@ -152,7 +152,7 @@ return {
 
       return pandoc.RawInline(
         'typst',
-        "#fa-" .. icon .. "(" .. size .. fill .. ")"
+        "#fa-" .. icon .. "(" .. size .. color .. ")"
         )
     else
       return pandoc.Null()

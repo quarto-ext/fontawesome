@@ -15,12 +15,12 @@ It provides an `{{{< fa >}}}` shortcode:
   {{{< fa <icon-name> >}}}
   ```
 
-- Optional `<group>`, `<size=...>`, `<fill=...>`, `<title=...>`, and `<label=...>`:
+- Optional `<group>`, `<size=...>`, `<color=...>`, `<title=...>`, and `<label=...>`:
   ``` markdown
-  {{{< fa <group> <icon-name> <size=...> <fill=...> <title=...> <label=...> >}}}
+  {{{< fa <group> <icon-name> <size=...> <color=...> <title=...> <label=...> >}}}
   ```
 
-The `title` and `label` parameters are only supported for the `html` format. The `fill` parameter is only supported for the `typst` format. The `typst` format also supports brand icons without any requirement to specify a `group` parameter.
+The `title` and `label` parameters are only supported for the `html` format. The `color` parameter is only supported for the `typst` format. The `typst` format also supports brand icons without any requirement to specify a `group` parameter.
 
 For example:
 
@@ -48,7 +48,7 @@ HTML and Typst format-specific examples:
 | Shortcode                                          | Icon                                      |
 | -------------------------------------------------- | ----------------------------------------- |
 | `{{{< fa brands twitter size=2xl >}}}` (HTML and Typst only) | {{< fa brands twitter size=2xl >}}        |
-| `{{{< fa pizza-slice size=2xl fill="red">}}}` (Typst only) | {{< fa pizza-slice size=2xl fill="red">}}        |
+| `{{{< fa pizza-slice size=2xl color="red">}}}` (Typst only) | {{< fa pizza-slice size=2xl color="red">}}        |
 
 :::
 
