@@ -3,9 +3,11 @@ title: Font Awesome Quarto Extension
 format:
    html: default
    pdf: default
+   typst: default
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF LaTeX and Typst documents.
+This extension allows you to use font-awesome icons in your Quarto HTML, PDF LaTeX, and Typst documents.
+
 It provides an `{{{< fa >}}}` shortcode:
 
 -   Mandatory `<icon-name>`:
