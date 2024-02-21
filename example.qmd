@@ -3,9 +3,11 @@ title: Font Awesome Quarto Extension
 format:
    html: default
    pdf: default
+   typst: default
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents.
+This extension allows you to use font-awesome icons in your Quarto HTML, PDF LaTeX, and Typst documents.
+
 It provides an `{{{< fa >}}}` shortcode:
 
 - Mandatory `<icon-name>`:
@@ -13,10 +15,12 @@ It provides an `{{{< fa >}}}` shortcode:
   {{{< fa <icon-name> >}}}
   ```
 
-- Optional `<group>`, `<size=...>`, and `<title=...>`:
+- Optional `<group>`, `<size=...>`, `<color=...>`, `<title=...>`, and `<label=...>`:
   ``` markdown
-  {{{< fa <group> <icon-name> <size=...> <title=...> >}}}
+  {{{< fa <group> <icon-name> <size=...> <color=...> <title=...> <label=...> >}}}
   ```
+
+The `title` and `label` parameters are only supported for the `html` format. The `color` parameter is only supported for the `typst` format. The `typst` format also supports brand icons without any requirement to specify a `group` parameter.
 
 For example:
 
@@ -26,13 +30,31 @@ For example:
 | `{{{< fa folder >}}}`                              | {{< fa folder >}}                         |
 | `{{{< fa chess-pawn >}}}`                          | {{< fa chess-pawn >}}                     |
 | `{{{< fa brands bluetooth >}}}`                    | {{< fa brands bluetooth >}}               |
-| `{{{< fa brands twitter size=2xl >}}}` (HTML only) | {{< fa brands twitter size=2xl >}}        |
+| `{{{< fa battery-half size=Huge >}}}`             | {{< fa battery-half size=Huge >}}         |
+
+::: {.content-visible when-format="html"}
+HTML and Typst format-specific examples:
+
+| Shortcode                                          | Icon                                      |
+| -------------------------------------------------- | ----------------------------------------- |
+| `{{{< fa brands twitter size=2xl >}}}` (HTML and Typst only) | {{< fa brands twitter size=2xl >}}        |
 | `{{{< fa brands github size=5x >}}}` (HTML only)   | {{< fa brands github size=5x >}}          |
-| `{{{< fa battery-half size=Huge >}}}`              | {{< fa battery-half size=Huge >}}         |
-| `{{{< fa envelope title="An envelope" >}}}`        | {{< fa envelope title="An envelope" >}}   |
+| `{{{< fa envelope title="An envelope" >}}}` (HTML only)   | {{< fa envelope title="An envelope" >}}   |
+:::
+
+::: {.content-visible when-format="typst"}
+HTML and Typst format-specific examples:
+
+| Shortcode                                          | Icon                                      |
+| -------------------------------------------------- | ----------------------------------------- |
+| `{{{< fa brands twitter size=2xl >}}}` (HTML and Typst only) | {{< fa brands twitter size=2xl >}}        |
+| `{{{< fa pizza-slice size=2xl color="red">}}}` (Typst only) | {{< fa pizza-slice size=2xl color="red">}}        |
+
+:::
 
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
 - `html` uses FontAwesome 6.4.2
 - `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
+- `typst` uses the `typst-fontawesome` package
 - Other formats are currently not supported, but PRs are always welcome!

@@ -10,6 +10,14 @@ local function ensureHtmlDeps()
   })
 end
 
+local function ensure_typst_font_awesome()
+  if included_font_awesome then
+    return
+  end
+  included_font_awesome = true
+  quarto.doc.include_text("in-header", "#import \"@preview/fontawesome:0.1.0\": *")
+end
+
 local function isEmpty(s)
   return s == nil or s == ''
 end
@@ -33,6 +41,53 @@ local function isValidSize(size)
     end
   end
   return ""
+end
+
+local function convert_fa_relative_size(size)
+  local validSizes = {
+    "2xs",
+    "xs",
+    "sm",
+    "lg",
+    "xl",
+    "2xl",
+    "tiny",
+    "scriptsize",
+    "footnotesize",
+    "small",
+    "normalsize",
+    "large",
+    "Large",
+    "LARGE",
+    "huge",
+    "Huge"
+  }
+  
+  local relativeSizes = {
+    "0.625em",
+    "0.75em",
+    "0.875em",
+    "1.25em",
+    "1.5em",
+    "2em",
+    "0.125em",
+    "0.5em",
+    "0.625em",
+    "0.75em",
+    "0.875em",
+    "1.25em",
+    "1.5em",
+    "2em",
+    "2.5em",
+    "3em"
+  }
+  
+  for i, v in ipairs(validSizes) do
+    if v == size then
+      return relativeSizes[i]
+    end
+  end
+  return size
 end
 
 return {
@@ -77,6 +132,28 @@ return {
       else
         return pandoc.RawInline('tex', "{\\" .. size .. "\\faIcon{" .. icon .. "}}")
       end
+    -- detect typst
+    elseif quarto.doc.is_format("typst") then
+      ensure_typst_font_awesome()
+      
+      local color = pandoc.utils.stringify(kwargs["color"])
+      if not isEmpty(size) then
+        size = convert_fa_relative_size(size)
+        size = "size: " .. size
+      end
+      
+      if not isEmpty(color) then
+        color = "fill: " .. color
+        
+        if not isEmpty(size) then
+          size = size .. ", "
+        end
+      end
+
+      return pandoc.RawInline(
+        'typst',
+        "#fa-" .. icon .. "(" .. size .. color .. ")"
+        )
     else
       return pandoc.Null()
     end
