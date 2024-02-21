@@ -50,7 +50,17 @@ local function convert_fa_relative_size(size)
     "sm",
     "lg",
     "xl",
-    "2xl"
+    "2xl",
+    "tiny",
+    "scriptsize",
+    "footnotesize",
+    "small",
+    "normalsize",
+    "large",
+    "Large",
+    "LARGE",
+    "huge",
+    "Huge"
   }
   
   local relativeSizes = {
@@ -59,7 +69,17 @@ local function convert_fa_relative_size(size)
     "0.875em",
     "1.25em",
     "1.5em",
-    "2em"
+    "2em",
+    "0.125em",
+    "0.5em",
+    "0.625em",
+    "0.75em",
+    "0.875em",
+    "1.25em",
+    "1.5em",
+    "2em",
+    "2.5em",
+    "3em"
   }
   
   for i, v in ipairs(validSizes) do
@@ -117,26 +137,23 @@ return {
       ensure_typst_font_awesome()
       
       local fill = pandoc.utils.stringify(kwargs["fill"])
-      if not isEmpty(fill) then
-        fill = ", fill: " .. fill
-      end
-      
       if not isEmpty(size) then
         size = convert_fa_relative_size(size)
-        size = ", size: " .. size
+        size = "size: " .. size
       end
       
-      if group == "brands" then
-        return pandoc.RawInline(
-          'typst',
-          "#fa-icon(\"" .. icon .. "\", fa-set: \"Brands\"" .. size .. fill .. ")"
-          )
-      else
-        return pandoc.RawInline(
-            'typst',
-            "#fa-icon(\"" .. icon .. "\"" .. size .. fill .. ")"
-            )
+      if not isEmpty(fill) then
+        fill = "fill: " .. fill
+        
+        if not isEmpty(size) then
+          size = size .. ", "
+        end
       end
+
+      return pandoc.RawInline(
+        'typst',
+        "#fa-" .. icon .. "(" .. size .. fill .. ")"
+        )
     else
       return pandoc.Null()
     end
