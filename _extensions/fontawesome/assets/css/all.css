@@ -1,7 +1,7 @@
 /*!
- * Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2023 Fonticons, Inc.
+ * Copyright 2024 Fonticons, Inc.
  */
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
@@ -15,13 +15,7 @@
 .far,
 .fa-regular,
 .fab,
-.fa-brands,
-.fal, 
-.fa-light,
-.fat,
-.fa-thin,
-.fad,
-.fa-duotone {
+.fa-brands {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: var(--fa-display, inline-block);
@@ -469,8 +463,8 @@
           transform: scale(-1, -1); }
 
 .fa-rotate-by {
-  -webkit-transform: rotate(var(--fa-rotate-angle, none));
-          transform: rotate(var(--fa-rotate-angle, none)); }
+  -webkit-transform: rotate(var(--fa-rotate-angle, 0));
+          transform: rotate(var(--fa-rotate-angle, 0)); }
 
 .fa-stack {
   display: inline-block;
@@ -2774,6 +2768,9 @@ readers do not read off random characters that represent icons */
 .fa-italic::before {
   content: "\f033"; }
 
+.fa-table-cells-column-lock::before {
+  content: "\e678"; }
+
 .fa-church::before {
   content: "\f51d"; }
 
@@ -4946,6 +4943,9 @@ readers do not read off random characters that represent icons */
 .fa-font::before {
   content: "\f031"; }
 
+.fa-table-cells-row-lock::before {
+  content: "\e67a"; }
+
 .fa-rupiah-sign::before {
   content: "\e23d"; }
 
@@ -5975,9 +5975,6 @@ readers do not read off random characters that represent icons */
 .fa-share::before {
   content: "\f064"; }
 
-.fa-arrow-turn-right::before {
-  content: "\f064"; }
-
 .fa-mail-forward::before {
   content: "\f064"; }
 
@@ -6385,7 +6382,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/FontAwesome6Brands-Regular-400.woff2") format("woff2"), url("../webfonts/FontAwesome6Brands-Regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
 
 .fab,
 .fa-brands {
@@ -6426,6 +6423,9 @@ readers do not read off random characters that represent icons */
 
 .fa-ups:before {
   content: "\f7e0"; }
+
+.fa-pixiv:before {
+  content: "\e640"; }
 
 .fa-wpexplorer:before {
   content: "\f2de"; }
@@ -6487,6 +6487,9 @@ readers do not read off random characters that represent icons */
 .fa-drupal:before {
   content: "\f1a9"; }
 
+.fa-jxl:before {
+  content: "\e67b"; }
+
 .fa-hire-a-helper:before {
   content: "\f3b0"; }
 
@@ -6531,6 +6534,9 @@ readers do not read off random characters that represent icons */
 
 .fa-deskpro:before {
   content: "\f38f"; }
+
+.fa-brave:before {
+  content: "\e63c"; }
 
 .fa-sistrix:before {
   content: "\f3ee"; }
@@ -6700,6 +6706,9 @@ readers do not read off random characters that represent icons */
 .fa-cloudsmith:before {
   content: "\f384"; }
 
+.fa-opensuse:before {
+  content: "\e62b"; }
+
 .fa-pied-piper-alt:before {
   content: "\f1a8"; }
 
@@ -6784,6 +6793,9 @@ readers do not read off random characters that represent icons */
 .fa-kickstarter:before {
   content: "\f3bb"; }
 
+.fa-square-kickstarter:before {
+  content: "\f3bb"; }
+
 .fa-grav:before {
   content: "\f2d6"; }
 
@@ -6844,6 +6856,9 @@ readers do not read off random characters that represent icons */
 .fa-bluetooth-b:before {
   content: "\f294"; }
 
+.fa-square-letterboxd:before {
+  content: "\e62e"; }
+
 .fa-sticker-mule:before {
   content: "\f3f7"; }
 
@@ -6876,6 +6891,9 @@ readers do not read off random characters that represent icons */
 
 .fa-confluence:before {
   content: "\f78d"; }
+
+.fa-shoelace:before {
+  content: "\e60c"; }
 
 .fa-mdb:before {
   content: "\f8ca"; }
@@ -6999,6 +7017,9 @@ readers do not read off random characters that represent icons */
 
 .fa-envira:before {
   content: "\f299"; }
+
+.fa-google-scholar:before {
+  content: "\e63b"; }
 
 .fa-square-gitlab:before {
   content: "\e5ae"; }
@@ -7132,6 +7153,9 @@ readers do not read off random characters that represent icons */
 .fa-vine:before {
   content: "\f1ca"; }
 
+.fa-signal-messenger:before {
+  content: "\e663"; }
+
 .fa-paypal:before {
   content: "\f1ed"; }
 
@@ -7165,6 +7189,9 @@ readers do not read off random characters that represent icons */
 .fa-nfc-symbol:before {
   content: "\e531"; }
 
+.fa-mintbit:before {
+  content: "\e62f"; }
+
 .fa-ethereum:before {
   content: "\f42e"; }
 
@@ -7189,6 +7216,9 @@ readers do not read off random characters that represent icons */
 .fa-bimobject:before {
   content: "\f378"; }
 
+.fa-brave-reverse:before {
+  content: "\e63d"; }
+
 .fa-facebook-f:before {
   content: "\f39e"; }
 
@@ -7197,6 +7227,9 @@ readers do not read off random characters that represent icons */
 
 .fa-google-plus-square:before {
   content: "\f0d4"; }
+
+.fa-web-awesome:before {
+  content: "\e682"; }
 
 .fa-mandalorian:before {
   content: "\f50f"; }
@@ -7291,6 +7324,9 @@ readers do not read off random characters that represent icons */
 .fa-tencent-weibo:before {
   content: "\f1d5"; }
 
+.fa-letterboxd:before {
+  content: "\e62d"; }
+
 .fa-symfony:before {
   content: "\f83d"; }
 
@@ -7356,6 +7392,9 @@ readers do not read off random characters that represent icons */
 
 .fa-xbox:before {
   content: "\f412"; }
+
+.fa-square-web-awesome-stroke:before {
+  content: "\e684"; }
 
 .fa-searchengin:before {
   content: "\f3eb"; }
@@ -7429,6 +7468,9 @@ readers do not read off random characters that represent icons */
 .fa-cmplid:before {
   content: "\e360"; }
 
+.fa-upwork:before {
+  content: "\e641"; }
+
 .fa-facebook:before {
   content: "\f09a"; }
 
@@ -7461,6 +7503,9 @@ readers do not read off random characters that represent icons */
 
 .fa-whatsapp:before {
   content: "\f232"; }
+
+.fa-square-upwork:before {
+  content: "\e67c"; }
 
 .fa-slideshare:before {
   content: "\f1e7"; }
@@ -7540,6 +7585,9 @@ readers do not read off random characters that represent icons */
 .fa-sellsy:before {
   content: "\f213"; }
 
+.fa-square-web-awesome:before {
+  content: "\e683"; }
+
 .fa-sass:before {
   content: "\f41e"; }
 
@@ -7576,6 +7624,9 @@ readers do not read off random characters that represent icons */
 .fa-waze:before {
   content: "\f83f"; }
 
+.fa-bluesky:before {
+  content: "\e671"; }
+
 .fa-cc-jcb:before {
   content: "\f24b"; }
 
@@ -7602,6 +7653,9 @@ readers do not read off random characters that represent icons */
 
 .fa-supple:before {
   content: "\f3f9"; }
+
+.fa-webflow:before {
+  content: "\e65c"; }
 
 .fa-rebel:before {
   content: "\f1d0"; }
@@ -7917,7 +7971,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/FontAwesome6Free-Regular-400.woff2") format("woff2"), url("../webfonts/FontAwesome6Free-Regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype"); }
 
 .far,
 .fa-regular {
@@ -7931,41 +7985,46 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/FontAwesome6Free-Solid-900.woff2") format("woff2"), url("../webfonts/FontAwesome6Free-Solid-900.ttf") format("truetype"); }
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
 
 .fas,
 .fa-solid {
   font-weight: 900; }
 @font-face {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: 'Font Awesome 5 Brands';
   font-display: block;
   font-weight: 400;
-  src: url("../webfonts/FontAwesome6Brands-Regular-400.woff2") format("woff2"), url("../webfonts/FontAwesome6Brands-Regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'Font Awesome 5 Free';
   font-display: block;
   font-weight: 900;
-  src: url("../webfonts/FontAwesome6Free-Solid-900.woff2") format("woff2"), url("../webfonts/FontAwesome6Free-Solid-900.ttf") format("truetype"); }
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'Font Awesome 5 Free';
   font-display: block;
   font-weight: 400;
-  src: url("../webfonts/../webfonts/FontAwesome6Free-Regular-400.woff2") format("woff2"), url("../webfonts/FontAwesome6Free-Regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype"); }
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'FontAwesome';
   font-display: block;
-  src: url("../webfonts/FontAwesome6Free-Solid-900.woff2") format("woff2"), url("../webfonts/FontAwesome6Free-Solid-900.ttf") format("truetype"); }
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: 'FontAwesome';
   font-display: block;
-  src: url("../webfonts/FontAwesome6Brands-Regular-400.woff2") format("woff2"), url("../webfonts/FontAwesome6Brands-Regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'FontAwesome';
   font-display: block;
-  src: url("../webfonts/FontAwesome6Free-Regular-400.woff2") format("woff2"), url("../../webfonts/FontAwesome6Free-Regular-400.ttf") format("truetype");
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
   unicode-range: U+F003,U+F006,U+F014,U+F016-F017,U+F01A-F01B,U+F01D,U+F022,U+F03E,U+F044,U+F046,U+F05C-F05D,U+F06E,U+F070,U+F087-F088,U+F08A,U+F094,U+F096-F097,U+F09D,U+F0A0,U+F0A2,U+F0A4-F0A7,U+F0C5,U+F0C7,U+F0E5-F0E6,U+F0EB,U+F0F6-F0F8,U+F10C,U+F114-F115,U+F118-F11A,U+F11C-F11D,U+F133,U+F147,U+F14E,U+F150-F152,U+F185-F186,U+F18E,U+F190-F192,U+F196,U+F1C1-F1C9,U+F1D9,U+F1DB,U+F1E3,U+F1EA,U+F1F7,U+F1F9,U+F20A,U+F247-F248,U+F24A,U+F24D,U+F255-F25B,U+F25D,U+F271-F274,U+F278,U+F27B,U+F28C,U+F28E,U+F29C,U+F2B5,U+F2B7,U+F2BA,U+F2BC,U+F2BE,U+F2C0-F2C1,U+F2C3,U+F2D0,U+F2D2,U+F2D4,U+F2DC; }
 
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: block;
+  src: url("../webfonts/fa-v4compatibility.woff2") format("woff2"), url("../webfonts/fa-v4compatibility.ttf") format("truetype");
+  unicode-range: U+F041,U+F047,U+F065-F066,U+F07D-F07E,U+F080,U+F08B,U+F08E,U+F090,U+F09A,U+F0AC,U+F0AE,U+F0B2,U+F0D0,U+F0D6,U+F0E4,U+F0EC,U+F10A-F10B,U+F123,U+F13E,U+F148-F149,U+F14C,U+F156,U+F15E,U+F160-F161,U+F163,U+F175-F178,U+F195,U+F1F8,U+F219,U+F27A; }
