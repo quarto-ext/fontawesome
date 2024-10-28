@@ -1,1 +1,0 @@
-Sitemap: https://github.com/quarto-ext/fontawesome/sitemap.xml
