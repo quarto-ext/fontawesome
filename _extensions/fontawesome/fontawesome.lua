@@ -16,6 +16,8 @@ local function ensure_typst_font_awesome()
   if not included_font_awesome then
     included_font_awesome = true
     quarto.doc.include_text('in-header', '#import "@preview/fontawesome:0.6.0": *')
+    -- Opt-in version 6 for now
+    quarto.doc.include_text('in-header', 'fa-version("6")')
   end
 end
 
