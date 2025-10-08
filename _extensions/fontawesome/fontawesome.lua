@@ -87,8 +87,8 @@ local function convert_fa_relative_size(size)
     return sizeMap[size]
   end
 
-  -- If not found, return original size (allows custom em values)
-  return size
+  -- If not found, ignore size
+  return ''
 end
 
 return {
@@ -141,11 +141,30 @@ return {
     -- detect typst
     elseif quarto.doc.is_format("typst") then
       ensure_typst_font_awesome()
-      
+
+      -- Build array of parameters for fa-icon()
+      local params = {'"' .. icon .. '"'}
+
+      -- Add size parameter if specified and valid
+      local sizeValue = convert_fa_relative_size(size)
+      if not isEmpty(sizeValue) then
+        table.insert(params, "size: " .. sizeValue)
+      end
+
+      -- Add solid parameter based on group
+      if group == "regular" then
+        table.insert(params, "solid: false")
+      elseif group == "solid" then
+        table.insert(params, "solid: true")
+      end
+
+      -- Join parameters with comma-space separator
+      local iconContent = table.concat(params, ", ")
+
       return pandoc.RawInline(
         'typst',
-        "#fa-" .. icon .. "(" .. size .. ")"
-        )
+        '#fa-icon(' .. iconContent .. ')'
+      )
     else
       return pandoc.Null()
     end
