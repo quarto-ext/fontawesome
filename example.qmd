@@ -38,6 +38,9 @@ Note that the icon sets are currently not perfectly interchangeable across forma
 -   `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
 -   Other formats are currently not supported, but PRs are always welcome!
 
+
+::: {.content-visible when-format="html"}
+
 ## Available Icons Reference
 
 Below is a comprehensive list of available Font Awesome 6.7.2 icons organized by category.
@@ -127,3 +130,5 @@ For a complete searchable list of all 2,000+ icons, visit the [Font Awesome Icon
 -   Brand icons require the `brands` group: `{{{< fa brands icon-name >}}}`
 -   Regular icons can use the `regular` group: `{{{< fa regular icon-name >}}}`
 -   Solid icons (default) can optionally use `solid` group: `{{{< fa solid icon-name >}}}`
+ 
+:::
