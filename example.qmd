@@ -5,34 +5,125 @@ format:
    pdf: default
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents.
-It provides an `{{{< fa >}}}` shortcode:
+This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an `{{{< fa >}}}` shortcode:
 
-- Mandatory `<icon-name>`:
-  ``` markdown
-  {{{< fa <icon-name> >}}}
-  ```
+-   Mandatory `<icon-name>`:
 
-- Optional `<group>`, `<size=...>`, and `<title=...>`:
-  ``` markdown
-  {{{< fa <group> <icon-name> <size=...> <title=...> >}}}
-  ```
+    ``` markdown
+    {{{< fa <icon-name> >}}}
+    ```
+
+-   Optional `<group>`, `<size=...>`, and `<title=...>`:
+
+    ``` markdown
+    {{{< fa <group> <icon-name> <size=...> <title=...> >}}}
+    ```
 
 For example:
 
-| Shortcode                                          | Icon                                      |
-| -------------------------------------------------- | ----------------------------------------- |
-| `{{{< fa thumbs-up >}}}`                           | {{< fa thumbs-up >}}                      |
-| `{{{< fa folder >}}}`                              | {{< fa folder >}}                         |
-| `{{{< fa chess-pawn >}}}`                          | {{< fa chess-pawn >}}                     |
-| `{{{< fa brands bluetooth >}}}`                    | {{< fa brands bluetooth >}}               |
-| `{{{< fa brands twitter size=2xl >}}}` (HTML only) | {{< fa brands twitter size=2xl >}}        |
-| `{{{< fa brands github size=5x >}}}` (HTML only)   | {{< fa brands github size=5x >}}          |
-| `{{{< fa battery-half size=Huge >}}}`              | {{< fa battery-half size=Huge >}}         |
-| `{{{< fa envelope title="An envelope" >}}}`        | {{< fa envelope title="An envelope" >}}   |
+| Shortcode | Icon |
+|---------------------------------------|---------------------------------|
+| `{{{< fa thumbs-up >}}}` | {{< fa thumbs-up >}} |
+| `{{{< fa folder >}}}` | {{< fa folder >}} |
+| `{{{< fa chess-pawn >}}}` | {{< fa chess-pawn >}} |
+| `{{{< fa brands bluetooth >}}}` | {{< fa brands bluetooth >}} |
+| `{{{< fa brands twitter size=2xl >}}}` (HTML only) | {{< fa brands twitter size=2xl >}} |
+| `{{{< fa brands github size=5x >}}}` (HTML only) | {{< fa brands github size=5x >}} |
+| `{{{< fa battery-half size=Huge >}}}` | {{< fa battery-half size=Huge >}} |
+| `{{{< fa envelope title="An envelope" >}}}` | {{< fa envelope title="An envelope" >}} |
 
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
-- `html` uses FontAwesome 6.4.2
-- `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
-- Other formats are currently not supported, but PRs are always welcome!
+-   `html` uses FontAwesome 6.7.2
+-   `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
+-   Other formats are currently not supported, but PRs are always welcome!
+
+## Available Icons Reference
+
+Below is a comprehensive list of available Font Awesome 6.7.2 icons organized by category.
+
+### Solid Icons (Default)
+
+These icons work without specifying a group:
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa house >}} | `house` | {{< fa heart >}} | `heart` | {{< fa star >}} | `star` |
+| {{< fa user >}} | `user` | {{< fa check >}} | `check` | {{< fa xmark >}} | `xmark` |
+| {{< fa magnifying-glass >}} | `magnifying-glass` | {{< fa envelope >}} | `envelope` | {{< fa phone >}} | `phone` |
+| {{< fa calendar >}} | `calendar` | {{< fa clock >}} | `clock` | {{< fa location-dot >}} | `location-dot` |
+| {{< fa camera >}} | `camera` | {{< fa file >}} | `file` | {{< fa folder >}} | `folder` |
+| {{< fa trash >}} | `trash` | {{< fa download >}} | `download` | {{< fa upload >}} | `upload` |
+| {{< fa pencil >}} | `pencil` | {{< fa pen >}} | `pen` | {{< fa print >}} | `print` |
+| {{< fa share >}} | `share` | {{< fa link >}} | `link` | {{< fa lock >}} | `lock` |
+| {{< fa bell >}} | `bell` | {{< fa gear >}} | `gear` | {{< fa wrench >}} | `wrench` |
+| {{< fa plus >}} | `plus` | {{< fa minus >}} | `minus` | {{< fa circle-info >}} | `circle-info` |
+| {{< fa circle-question >}} | `circle-question` | {{< fa triangle-exclamation >}} | `triangle-exclamation` | {{< fa ban >}} | `ban` |
+| {{< fa thumbs-up >}} | `thumbs-up` | {{< fa thumbs-down >}} | `thumbs-down` | {{< fa comment >}} | `comment` |
+| {{< fa book >}} | `book` | {{< fa bookmark >}} | `bookmark` | {{< fa flag >}} | `flag` |
+| {{< fa globe >}} | `globe` | {{< fa cloud >}} | `cloud` | {{< fa fire >}} | `fire` |
+| {{< fa bolt >}} | `bolt` | {{< fa sun >}} | `sun` | {{< fa moon >}} | `moon` |
+| {{< fa music >}} | `music` | {{< fa image >}} | `image` | {{< fa video >}} | `video` |
+| {{< fa shopping-cart >}} | `shopping-cart` | {{< fa credit-card >}} | `credit-card` | {{< fa gift >}} | `gift` |
+| {{< fa truck >}} | `truck` | {{< fa plane >}} | `plane` | {{< fa car >}} | `car` |
+| {{< fa laptop >}} | `laptop` | {{< fa mobile >}} | `mobile` | {{< fa tablet >}} | `tablet` |
+| {{< fa database >}} | `database` | {{< fa server >}} | `server` | {{< fa wifi >}} | `wifi` |
+
+### Arrows & Navigation
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa arrow-up >}} | `arrow-up` | {{< fa arrow-down >}} | `arrow-down` | {{< fa arrow-left >}} | `arrow-left` |
+| {{< fa arrow-right >}} | `arrow-right` | {{< fa chevron-up >}} | `chevron-up` | {{< fa chevron-down >}} | `chevron-down` |
+| {{< fa chevron-left >}} | `chevron-left` | {{< fa chevron-right >}} | `chevron-right` | {{< fa angles-up >}} | `angles-up` |
+| {{< fa angles-down >}} | `angles-down` | {{< fa angles-left >}} | `angles-left` | {{< fa angles-right >}} | `angles-right` |
+| {{< fa circle-arrow-up >}} | `circle-arrow-up` | {{< fa circle-arrow-down >}} | `circle-arrow-down` | {{< fa circle-arrow-left >}} | `circle-arrow-left` |
+| {{< fa circle-arrow-right >}} | `circle-arrow-right` | {{< fa rotate >}} | `rotate` | {{< fa rotate-right >}} | `rotate-right` |
+
+### User & People
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa user >}} | `user` | {{< fa users >}} | `users` | {{< fa user-plus >}} | `user-plus` |
+| {{< fa user-minus >}} | `user-minus` | {{< fa user-check >}} | `user-check` | {{< fa user-xmark >}} | `user-xmark` |
+| {{< fa user-gear >}} | `user-gear` | {{< fa user-tie >}} | `user-tie` | {{< fa user-group >}} | `user-group` |
+| {{< fa user-graduate >}} | `user-graduate` | {{< fa user-doctor >}} | `user-doctor` | {{< fa user-nurse >}} | `user-nurse` |
+
+### Charts & Data
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa chart-line >}} | `chart-line` | {{< fa chart-bar >}} | `chart-bar` | {{< fa chart-pie >}} | `chart-pie` |
+| {{< fa chart-area >}} | `chart-area` | {{< fa chart-column >}} | `chart-column` | {{< fa chart-simple >}} | `chart-simple` |
+
+### Tech & Code
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa code >}} | `code` | {{< fa terminal >}} | `terminal` | {{< fa bug >}} | `bug` |
+| {{< fa laptop-code >}} | `laptop-code` | {{< fa code-branch >}} | `code-branch` | {{< fa code-commit >}} | `code-commit` |
+| {{< fa code-merge >}} | `code-merge` | {{< fa code-pull-request >}} | `code-pull-request` | {{< fa cube >}} | `cube` |
+
+### Brands (use `brands` group)
+
+| Icon | Name | Icon | Name | Icon | Name |
+|------------|------------|------------|------------|------------|------------|
+| {{< fa brands github >}} | `github` | {{< fa brands gitlab >}} | `gitlab` | {{< fa brands twitter >}} | `twitter` |
+| {{< fa brands facebook >}} | `facebook` | {{< fa brands linkedin >}} | `linkedin` | {{< fa brands youtube >}} | `youtube` |
+| {{< fa brands instagram >}} | `instagram` | {{< fa brands reddit >}} | `reddit` | {{< fa brands discord >}} | `discord` |
+| {{< fa brands slack >}} | `slack` | {{< fa brands python >}} | `python` | {{< fa brands java >}} | `java` |
+| {{< fa brands js >}} | `js` | {{< fa brands react >}} | `react` | {{< fa brands node-js >}} | `node-js` |
+| {{< fa brands docker >}} | `docker` | {{< fa brands apple >}} | `apple` | {{< fa brands windows >}} | `windows` |
+| {{< fa brands linux >}} | `linux` | {{< fa brands android >}} | `android` | {{< fa brands chrome >}} | `chrome` |
+| {{< fa brands firefox >}} | `firefox` | {{< fa brands microsoft >}} | `microsoft` | {{< fa brands google >}} | `google` |
+
+### Complete Icon List
+
+For a complete searchable list of all 2,000+ icons, visit the [Font Awesome Icon Gallery](https://fontawesome.com/icons).
+
+**Usage tips:**
+
+-   Most icons work without a group prefix: `{{{< fa icon-name >}}}`
+-   Brand icons require the `brands` group: `{{{< fa brands icon-name >}}}`
+-   Regular icons can use the `regular` group: `{{{< fa regular icon-name >}}}`
+-   Solid icons (default) can optionally use `solid` group: `{{{< fa solid icon-name >}}}`
