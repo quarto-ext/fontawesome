@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.30">
+<meta name="generator" content="quarto-1.9.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,8 +21,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -58,22 +59,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="example_files/libs/clipboard/clipboard.min.js"></script>
-<script src="example_files/libs/quarto-html/quarto.js"></script>
+<script src="example_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="example_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="example_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="example_files/libs/quarto-html/popper.min.js"></script>
 <script src="example_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="example_files/libs/quarto-html/anchor.min.js"></script>
 <link href="example_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="example_files/libs/quarto-html/quarto-syntax-highlighting-3a01e2046221230fdceeea94b1ec5d67.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="example_files/libs/quarto-html/quarto-syntax-highlighting-6172778a27b0bfa6b3b3f65992e46a92.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="example_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="example_files/libs/bootstrap/bootstrap-9b365665436b74601bfdd373904bad7c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="example_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="example_files/libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="example_files/libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 
 
 </head>
 
-<body>
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -102,9 +105,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an <code>{{&lt; fa &gt;}}</code> shortcode:</p>
 <ul>
 <li><p>Mandatory <code>&lt;icon-name&gt;</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa &lt;icon-name&gt; &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa <span class="dt">&lt;</span><span class="kw">icon-name</span><span class="dt">&gt;</span> &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Optional <code>&lt;group&gt;</code>, <code>&lt;size=...&gt;</code>, and <code>&lt;title=...&gt;</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa &lt;group&gt; &lt;icon-name&gt; &lt;size=...&gt; &lt;title=...&gt; &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa <span class="dt">&lt;</span><span class="kw">group</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">icon-name</span><span class="dt">&gt;</span> &lt;size=...&gt; &lt;title=...&gt; &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 <p>For example:</p>
 <table class="caption-top table">
@@ -155,247 +158,761 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>Note that the icon sets are currently not perfectly interchangeable across formats:</p>
 <ul>
-<li><code>html</code> uses FontAwesome 6.4.2</li>
+<li><code>html</code> uses FontAwesome 6.7.2</li>
 <li><code>pdf</code> uses the <code>fontawesome5</code> package, based on <a href="https://ctan.org/pkg/fontawesome5">FontAwesome 5</a>.</li>
 <li>Other formats are currently not supported, but PRs are always welcome!</li>
 </ul>
+<section id="available-icons-reference" class="level2">
+<h2 class="anchored" data-anchor-id="available-icons-reference">Available Icons Reference</h2>
+<p>Below is a comprehensive list of available Font Awesome 6.7.2 icons organized by category.</p>
+<section id="solid-icons-default" class="level3">
+<h3 class="anchored" data-anchor-id="solid-icons-default">Solid Icons (Default)</h3>
+<p>These icons work without specifying a group:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-solid fa-house" aria-label="house"></i></p></td>
+<td><code>house</code></td>
+<td><p><i class="fa-solid fa-heart" aria-label="heart"></i></p></td>
+<td><code>heart</code></td>
+<td><p><i class="fa-solid fa-star" aria-label="star"></i></p></td>
+<td><code>star</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-user" aria-label="user"></i></p></td>
+<td><code>user</code></td>
+<td><p><i class="fa-solid fa-check" aria-label="check"></i></p></td>
+<td><code>check</code></td>
+<td><p><i class="fa-solid fa-xmark" aria-label="xmark"></i></p></td>
+<td><code>xmark</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i></p></td>
+<td><code>magnifying-glass</code></td>
+<td><p><i class="fa-solid fa-envelope" aria-label="envelope"></i></p></td>
+<td><code>envelope</code></td>
+<td><p><i class="fa-solid fa-phone" aria-label="phone"></i></p></td>
+<td><code>phone</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-calendar" aria-label="calendar"></i></p></td>
+<td><code>calendar</code></td>
+<td><p><i class="fa-solid fa-clock" aria-label="clock"></i></p></td>
+<td><code>clock</code></td>
+<td><p><i class="fa-solid fa-location-dot" aria-label="location-dot"></i></p></td>
+<td><code>location-dot</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-camera" aria-label="camera"></i></p></td>
+<td><code>camera</code></td>
+<td><p><i class="fa-solid fa-file" aria-label="file"></i></p></td>
+<td><code>file</code></td>
+<td><p><i class="fa-solid fa-folder" aria-label="folder"></i></p></td>
+<td><code>folder</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-trash" aria-label="trash"></i></p></td>
+<td><code>trash</code></td>
+<td><p><i class="fa-solid fa-download" aria-label="download"></i></p></td>
+<td><code>download</code></td>
+<td><p><i class="fa-solid fa-upload" aria-label="upload"></i></p></td>
+<td><code>upload</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-pencil" aria-label="pencil"></i></p></td>
+<td><code>pencil</code></td>
+<td><p><i class="fa-solid fa-pen" aria-label="pen"></i></p></td>
+<td><code>pen</code></td>
+<td><p><i class="fa-solid fa-print" aria-label="print"></i></p></td>
+<td><code>print</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-share" aria-label="share"></i></p></td>
+<td><code>share</code></td>
+<td><p><i class="fa-solid fa-link" aria-label="link"></i></p></td>
+<td><code>link</code></td>
+<td><p><i class="fa-solid fa-lock" aria-label="lock"></i></p></td>
+<td><code>lock</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-bell" aria-label="bell"></i></p></td>
+<td><code>bell</code></td>
+<td><p><i class="fa-solid fa-gear" aria-label="gear"></i></p></td>
+<td><code>gear</code></td>
+<td><p><i class="fa-solid fa-wrench" aria-label="wrench"></i></p></td>
+<td><code>wrench</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-plus" aria-label="plus"></i></p></td>
+<td><code>plus</code></td>
+<td><p><i class="fa-solid fa-minus" aria-label="minus"></i></p></td>
+<td><code>minus</code></td>
+<td><p><i class="fa-solid fa-circle-info" aria-label="circle-info"></i></p></td>
+<td><code>circle-info</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-circle-question" aria-label="circle-question"></i></p></td>
+<td><code>circle-question</code></td>
+<td><p><i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i></p></td>
+<td><code>triangle-exclamation</code></td>
+<td><p><i class="fa-solid fa-ban" aria-label="ban"></i></p></td>
+<td><code>ban</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i></p></td>
+<td><code>thumbs-up</code></td>
+<td><p><i class="fa-solid fa-thumbs-down" aria-label="thumbs-down"></i></p></td>
+<td><code>thumbs-down</code></td>
+<td><p><i class="fa-solid fa-comment" aria-label="comment"></i></p></td>
+<td><code>comment</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-book" aria-label="book"></i></p></td>
+<td><code>book</code></td>
+<td><p><i class="fa-solid fa-bookmark" aria-label="bookmark"></i></p></td>
+<td><code>bookmark</code></td>
+<td><p><i class="fa-solid fa-flag" aria-label="flag"></i></p></td>
+<td><code>flag</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-globe" aria-label="globe"></i></p></td>
+<td><code>globe</code></td>
+<td><p><i class="fa-solid fa-cloud" aria-label="cloud"></i></p></td>
+<td><code>cloud</code></td>
+<td><p><i class="fa-solid fa-fire" aria-label="fire"></i></p></td>
+<td><code>fire</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-bolt" aria-label="bolt"></i></p></td>
+<td><code>bolt</code></td>
+<td><p><i class="fa-solid fa-sun" aria-label="sun"></i></p></td>
+<td><code>sun</code></td>
+<td><p><i class="fa-solid fa-moon" aria-label="moon"></i></p></td>
+<td><code>moon</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-music" aria-label="music"></i></p></td>
+<td><code>music</code></td>
+<td><p><i class="fa-solid fa-image" aria-label="image"></i></p></td>
+<td><code>image</code></td>
+<td><p><i class="fa-solid fa-video" aria-label="video"></i></p></td>
+<td><code>video</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-shopping-cart" aria-label="shopping-cart"></i></p></td>
+<td><code>shopping-cart</code></td>
+<td><p><i class="fa-solid fa-credit-card" aria-label="credit-card"></i></p></td>
+<td><code>credit-card</code></td>
+<td><p><i class="fa-solid fa-gift" aria-label="gift"></i></p></td>
+<td><code>gift</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-truck" aria-label="truck"></i></p></td>
+<td><code>truck</code></td>
+<td><p><i class="fa-solid fa-plane" aria-label="plane"></i></p></td>
+<td><code>plane</code></td>
+<td><p><i class="fa-solid fa-car" aria-label="car"></i></p></td>
+<td><code>car</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-laptop" aria-label="laptop"></i></p></td>
+<td><code>laptop</code></td>
+<td><p><i class="fa-solid fa-mobile" aria-label="mobile"></i></p></td>
+<td><code>mobile</code></td>
+<td><p><i class="fa-solid fa-tablet" aria-label="tablet"></i></p></td>
+<td><code>tablet</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-database" aria-label="database"></i></p></td>
+<td><code>database</code></td>
+<td><p><i class="fa-solid fa-server" aria-label="server"></i></p></td>
+<td><code>server</code></td>
+<td><p><i class="fa-solid fa-wifi" aria-label="wifi"></i></p></td>
+<td><code>wifi</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="arrows-navigation" class="level3">
+<h3 class="anchored" data-anchor-id="arrows-navigation">Arrows &amp; Navigation</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i></p></td>
+<td><code>arrow-up</code></td>
+<td><p><i class="fa-solid fa-arrow-down" aria-label="arrow-down"></i></p></td>
+<td><code>arrow-down</code></td>
+<td><p><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i></p></td>
+<td><code>arrow-left</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></p></td>
+<td><code>arrow-right</code></td>
+<td><p><i class="fa-solid fa-chevron-up" aria-label="chevron-up"></i></p></td>
+<td><code>chevron-up</code></td>
+<td><p><i class="fa-solid fa-chevron-down" aria-label="chevron-down"></i></p></td>
+<td><code>chevron-down</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-chevron-left" aria-label="chevron-left"></i></p></td>
+<td><code>chevron-left</code></td>
+<td><p><i class="fa-solid fa-chevron-right" aria-label="chevron-right"></i></p></td>
+<td><code>chevron-right</code></td>
+<td><p><i class="fa-solid fa-angles-up" aria-label="angles-up"></i></p></td>
+<td><code>angles-up</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-angles-down" aria-label="angles-down"></i></p></td>
+<td><code>angles-down</code></td>
+<td><p><i class="fa-solid fa-angles-left" aria-label="angles-left"></i></p></td>
+<td><code>angles-left</code></td>
+<td><p><i class="fa-solid fa-angles-right" aria-label="angles-right"></i></p></td>
+<td><code>angles-right</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-circle-arrow-up" aria-label="circle-arrow-up"></i></p></td>
+<td><code>circle-arrow-up</code></td>
+<td><p><i class="fa-solid fa-circle-arrow-down" aria-label="circle-arrow-down"></i></p></td>
+<td><code>circle-arrow-down</code></td>
+<td><p><i class="fa-solid fa-circle-arrow-left" aria-label="circle-arrow-left"></i></p></td>
+<td><code>circle-arrow-left</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i></p></td>
+<td><code>circle-arrow-right</code></td>
+<td><p><i class="fa-solid fa-rotate" aria-label="rotate"></i></p></td>
+<td><code>rotate</code></td>
+<td><p><i class="fa-solid fa-rotate-right" aria-label="rotate-right"></i></p></td>
+<td><code>rotate-right</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="user-people" class="level3">
+<h3 class="anchored" data-anchor-id="user-people">User &amp; People</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-solid fa-user" aria-label="user"></i></p></td>
+<td><code>user</code></td>
+<td><p><i class="fa-solid fa-users" aria-label="users"></i></p></td>
+<td><code>users</code></td>
+<td><p><i class="fa-solid fa-user-plus" aria-label="user-plus"></i></p></td>
+<td><code>user-plus</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-user-minus" aria-label="user-minus"></i></p></td>
+<td><code>user-minus</code></td>
+<td><p><i class="fa-solid fa-user-check" aria-label="user-check"></i></p></td>
+<td><code>user-check</code></td>
+<td><p><i class="fa-solid fa-user-xmark" aria-label="user-xmark"></i></p></td>
+<td><code>user-xmark</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-user-gear" aria-label="user-gear"></i></p></td>
+<td><code>user-gear</code></td>
+<td><p><i class="fa-solid fa-user-tie" aria-label="user-tie"></i></p></td>
+<td><code>user-tie</code></td>
+<td><p><i class="fa-solid fa-user-group" aria-label="user-group"></i></p></td>
+<td><code>user-group</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-user-graduate" aria-label="user-graduate"></i></p></td>
+<td><code>user-graduate</code></td>
+<td><p><i class="fa-solid fa-user-doctor" aria-label="user-doctor"></i></p></td>
+<td><code>user-doctor</code></td>
+<td><p><i class="fa-solid fa-user-nurse" aria-label="user-nurse"></i></p></td>
+<td><code>user-nurse</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="charts-data" class="level3">
+<h3 class="anchored" data-anchor-id="charts-data">Charts &amp; Data</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i></p></td>
+<td><code>chart-line</code></td>
+<td><p><i class="fa-solid fa-chart-bar" aria-label="chart-bar"></i></p></td>
+<td><code>chart-bar</code></td>
+<td><p><i class="fa-solid fa-chart-pie" aria-label="chart-pie"></i></p></td>
+<td><code>chart-pie</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-chart-area" aria-label="chart-area"></i></p></td>
+<td><code>chart-area</code></td>
+<td><p><i class="fa-solid fa-chart-column" aria-label="chart-column"></i></p></td>
+<td><code>chart-column</code></td>
+<td><p><i class="fa-solid fa-chart-simple" aria-label="chart-simple"></i></p></td>
+<td><code>chart-simple</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tech-code" class="level3">
+<h3 class="anchored" data-anchor-id="tech-code">Tech &amp; Code</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-solid fa-code" aria-label="code"></i></p></td>
+<td><code>code</code></td>
+<td><p><i class="fa-solid fa-terminal" aria-label="terminal"></i></p></td>
+<td><code>terminal</code></td>
+<td><p><i class="fa-solid fa-bug" aria-label="bug"></i></p></td>
+<td><code>bug</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i></p></td>
+<td><code>laptop-code</code></td>
+<td><p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p></td>
+<td><code>code-branch</code></td>
+<td><p><i class="fa-solid fa-code-commit" aria-label="code-commit"></i></p></td>
+<td><code>code-commit</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-solid fa-code-merge" aria-label="code-merge"></i></p></td>
+<td><code>code-merge</code></td>
+<td><p><i class="fa-solid fa-code-pull-request" aria-label="code-pull-request"></i></p></td>
+<td><code>code-pull-request</code></td>
+<td><p><i class="fa-solid fa-cube" aria-label="cube"></i></p></td>
+<td><code>cube</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="brands-use-brands-group" class="level3">
+<h3 class="anchored" data-anchor-id="brands-use-brands-group">Brands (use <code>brands</code> group)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><i class="fa-brands fa-github" aria-label="github"></i></p></td>
+<td><code>github</code></td>
+<td><p><i class="fa-brands fa-gitlab" aria-label="gitlab"></i></p></td>
+<td><code>gitlab</code></td>
+<td><p><i class="fa-brands fa-twitter" aria-label="twitter"></i></p></td>
+<td><code>twitter</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-brands fa-facebook" aria-label="facebook"></i></p></td>
+<td><code>facebook</code></td>
+<td><p><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></p></td>
+<td><code>linkedin</code></td>
+<td><p><i class="fa-brands fa-youtube" aria-label="youtube"></i></p></td>
+<td><code>youtube</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-brands fa-instagram" aria-label="instagram"></i></p></td>
+<td><code>instagram</code></td>
+<td><p><i class="fa-brands fa-reddit" aria-label="reddit"></i></p></td>
+<td><code>reddit</code></td>
+<td><p><i class="fa-brands fa-discord" aria-label="discord"></i></p></td>
+<td><code>discord</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-brands fa-slack" aria-label="slack"></i></p></td>
+<td><code>slack</code></td>
+<td><p><i class="fa-brands fa-python" aria-label="python"></i></p></td>
+<td><code>python</code></td>
+<td><p><i class="fa-brands fa-java" aria-label="java"></i></p></td>
+<td><code>java</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-brands fa-js" aria-label="js"></i></p></td>
+<td><code>js</code></td>
+<td><p><i class="fa-brands fa-react" aria-label="react"></i></p></td>
+<td><code>react</code></td>
+<td><p><i class="fa-brands fa-node-js" aria-label="node-js"></i></p></td>
+<td><code>node-js</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-brands fa-docker" aria-label="docker"></i></p></td>
+<td><code>docker</code></td>
+<td><p><i class="fa-brands fa-apple" aria-label="apple"></i></p></td>
+<td><code>apple</code></td>
+<td><p><i class="fa-brands fa-windows" aria-label="windows"></i></p></td>
+<td><code>windows</code></td>
+</tr>
+<tr class="odd">
+<td><p><i class="fa-brands fa-linux" aria-label="linux"></i></p></td>
+<td><code>linux</code></td>
+<td><p><i class="fa-brands fa-android" aria-label="android"></i></p></td>
+<td><code>android</code></td>
+<td><p><i class="fa-brands fa-chrome" aria-label="chrome"></i></p></td>
+<td><code>chrome</code></td>
+</tr>
+<tr class="even">
+<td><p><i class="fa-brands fa-firefox" aria-label="firefox"></i></p></td>
+<td><code>firefox</code></td>
+<td><p><i class="fa-brands fa-microsoft" aria-label="microsoft"></i></p></td>
+<td><code>microsoft</code></td>
+<td><p><i class="fa-brands fa-google" aria-label="google"></i></p></td>
+<td><code>google</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="complete-icon-list" class="level3">
+<h3 class="anchored" data-anchor-id="complete-icon-list">Complete Icon List</h3>
+<p>For a complete searchable list of all 2,000+ icons, visit the <a href="https://fontawesome.com/icons">Font Awesome Icon Gallery</a>.</p>
+<p><strong>Usage tips:</strong></p>
+<ul>
+<li>Most icons work without a group prefix: <code>{{&lt; fa icon-name &gt;}}</code></li>
+<li>Brand icons require the <code>brands</code> group: <code>{{&lt; fa brands icon-name &gt;}}</code></li>
+<li>Regular icons can use the <code>regular</code> group: <code>{{&lt; fa regular icon-name &gt;}}</code></li>
+<li>Solid icons (default) can optionally use <code>solid</code> group: <code>{{&lt; fa solid icon-name &gt;}}</code></li>
+</ul>
+</section>
+</section>
 
 </main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -403,185 +920,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 
