@@ -1,5 +1,5 @@
 local function ensureLatexDeps()
-  quarto.doc.use_latex_package("fontawesome5")
+  quarto.doc.use_latex_package("fontawesome6")
 end
 
 local function ensureHtmlDeps()
