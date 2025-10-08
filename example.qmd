@@ -3,6 +3,7 @@ title: Font Awesome Quarto Extension
 format:
    html: default
    pdf: default
+keep-tex: true
 ---
 
 This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an `{{{< fa >}}}` shortcode:
@@ -27,19 +28,16 @@ For example:
 | `{{{< fa folder >}}}` | {{< fa folder >}} |
 | `{{{< fa chess-pawn >}}}` | {{< fa chess-pawn >}} |
 | `{{{< fa brands bluetooth >}}}` | {{< fa brands bluetooth >}} |
-| `{{{< fa brands twitter size=2xl >}}}` (HTML only) | {{< fa brands twitter size=2xl >}} |
-| `{{{< fa brands github size=5x >}}}` (HTML only) | {{< fa brands github size=5x >}} |
+| `{{{< fa brands twitter size=2xl >}}}` | {{< fa brands twitter size=2xl >}} |
+| `{{{< fa brands github size=5x >}}}` | {{< fa brands github size=5x >}} |
 | `{{{< fa battery-half size=Huge >}}}` | {{< fa battery-half size=Huge >}} |
 | `{{{< fa envelope title="An envelope" >}}}` | {{< fa envelope title="An envelope" >}} |
 
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
--   `html` uses FontAwesome 6.7.2
--   `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
+-   `html` uses FontAwesome 6.7.2 from <<https://github.com/FortAwesome/Font-Awesome>
+-   `pdf` uses the [`fontawesome6`](https://ctan.org/pkg/fontawesome6) package, based on FontAwesome 6.7.2 too.
 -   Other formats are currently not supported, but PRs are always welcome!
-
-
-::: {.content-visible when-format="html"}
 
 ## Available Icons Reference
 
@@ -67,7 +65,7 @@ These icons work without specifying a group:
 | {{< fa globe >}} | `globe` | {{< fa cloud >}} | `cloud` | {{< fa fire >}} | `fire` |
 | {{< fa bolt >}} | `bolt` | {{< fa sun >}} | `sun` | {{< fa moon >}} | `moon` |
 | {{< fa music >}} | `music` | {{< fa image >}} | `image` | {{< fa video >}} | `video` |
-| {{< fa shopping-cart >}} | `shopping-cart` | {{< fa credit-card >}} | `credit-card` | {{< fa gift >}} | `gift` |
+| {{< fa cart-shopping >}} | `shopping-cart` | {{< fa credit-card >}} | `credit-card` | {{< fa gift >}} | `gift` |
 | {{< fa truck >}} | `truck` | {{< fa plane >}} | `plane` | {{< fa car >}} | `car` |
 | {{< fa laptop >}} | `laptop` | {{< fa mobile >}} | `mobile` | {{< fa tablet >}} | `tablet` |
 | {{< fa database >}} | `database` | {{< fa server >}} | `server` | {{< fa wifi >}} | `wifi` |
@@ -130,5 +128,3 @@ For a complete searchable list of all 2,000+ icons, visit the [Font Awesome Icon
 -   Brand icons require the `brands` group: `{{{< fa brands icon-name >}}}`
 -   Regular icons can use the `regular` group: `{{{< fa regular icon-name >}}}`
 -   Solid icons (default) can optionally use `solid` group: `{{{< fa solid icon-name >}}}`
- 
-:::
