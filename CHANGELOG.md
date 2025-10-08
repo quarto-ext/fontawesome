@@ -1,4 +1,4 @@
-# development version
+# v1.3.0
 
 -   Uses `fontawesome6` (<https://ctan.org/pkg/fontawesome6>) CTAN package for LaTeX now. This brings the same set of icons as FA 6.7.2 for LaTeX too. `regular` icons are now supported. (#42)
 
