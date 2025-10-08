@@ -47,49 +47,47 @@ local function isValidSize(size)
 end
 
 local function convert_fa_relative_size(size)
-  local validSizes = {
-    "2xs",
-    "xs",
-    "sm",
-    "lg",
-    "xl",
-    "2xl",
-    "tiny",
-    "scriptsize",
-    "footnotesize",
-    "small",
-    "normalsize",
-    "large",
-    "Large",
-    "LARGE",
-    "huge",
-    "Huge"
+  -- Map of Font Awesome size names to em values
+  -- Includes both CSS sizes (2xs, xs, sm, lg, xl, 2xl, 1x-10x)
+  -- and LaTeX sizes (tiny, scriptsize, etc.)
+  local sizeMap = {
+    -- Font Awesome CSS relative sizes
+    ["2xs"] = "0.625em",
+    ["xs"] = "0.75em",
+    ["sm"] = "0.875em",
+    ["lg"] = "1.25em",
+    ["xl"] = "1.5em",
+    ["2xl"] = "2em",
+    -- Font Awesome CSS multiplier sizes
+    ["1x"] = "1em",
+    ["2x"] = "2em",
+    ["3x"] = "3em",
+    ["4x"] = "4em",
+    ["5x"] = "5em",
+    ["6x"] = "6em",
+    ["7x"] = "7em",
+    ["8x"] = "8em",
+    ["9x"] = "9em",
+    ["10x"] = "10em",
+    -- LaTeX size names (matches latex-fontsize.css for consistency)
+    ["tiny"] = "0.5em",
+    ["scriptsize"] = "0.7em",
+    ["footnotesize"] = "0.8em",
+    ["small"] = "0.9em",
+    ["normalsize"] = "1em",
+    ["large"] = "1.2em",
+    ["Large"] = "1.5em",
+    ["LARGE"] = "1.75em",
+    ["huge"] = "2em",
+    ["Huge"] = "2.5em"
   }
-  
-  local relativeSizes = {
-    "0.625em",
-    "0.75em",
-    "0.875em",
-    "1.25em",
-    "1.5em",
-    "2em",
-    "0.125em",
-    "0.5em",
-    "0.625em",
-    "0.75em",
-    "0.875em",
-    "1.25em",
-    "1.5em",
-    "2em",
-    "2.5em",
-    "3em"
-  }
-  
-  for i, v in ipairs(validSizes) do
-    if v == size then
-      return relativeSizes[i]
-    end
+
+  -- Check if size is in the map
+  if sizeMap[size] then
+    return sizeMap[size]
   end
+
+  -- If not found, return original size (allows custom em values)
   return size
 end
 
