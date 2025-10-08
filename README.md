@@ -33,6 +33,8 @@ You can browse all of the available free icons here:
 
 <https://fontawesome.com/search?m=free>
 
+All icons available in this extensions are coming from <https://github.com/FortAwesome/Font-Awesome>
+
 ### Brands[^1]
 
 Note that there is a `brands` prefix used within the `bluetooth` example above.
