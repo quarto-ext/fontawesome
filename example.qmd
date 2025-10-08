@@ -13,13 +13,16 @@ This extension allows you to use font-awesome icons in your Quarto HTML and PDF 
     {{{< fa <icon-name> >}}}
     ```
 
--   Optional `<group>`, `<size=...>`, and `<title=...>`:
+-   Optional `<group>`, `<size=...>`, `<title=...>` and `<label = ...>`:
 
     ``` markdown
-    {{{< fa <group> <icon-name> <size=...> <title=...> >}}}
+    {{{< fa <group> <icon-name> <size=...> <title=...> <label=...>}}}
     ```
 
-    `group` defaults to `solid`.
+    - `group` defaults to `solid`.
+    - `size` usage is detailed in <https://github.com/quarto-ext/fontawesome#sizing-icons> 
+    - `title` is used only in HTML format to set the [`title` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title) on the `<i>` element. 
+    - `label` is used only in HTML format to set `aria-label` attribute. If unset, the `icon-name` is used.
 
 For example:
 
@@ -38,6 +41,7 @@ For example:
 | `{{{< fa brands github size=5x >}}}` | {{< fa brands github size=5x >}} |
 | `{{{< fa battery-half size=Huge >}}}` | {{< fa battery-half size=Huge >}} |
 | `{{{< fa envelope title="An envelope" >}}}` | {{< fa envelope title="An envelope" >}} |
+| `{{{< fa envelope title="An envelope" label="custom aria-label" >}}}` (HTML only) | {{< fa envelope title="An envelope" label="custom aria-label" >}} |
 
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
