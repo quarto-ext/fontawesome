@@ -33,6 +33,6 @@ For example:
 
 Note that the icon sets are currently not perfectly interchangeable across formats:
 
-- `html` uses FontAwesome 6.4.2
+- `html` uses FontAwesome 6.7.2
 - `pdf` uses the `fontawesome5` package, based on [FontAwesome 5](https://ctan.org/pkg/fontawesome5).
 - Other formats are currently not supported, but PRs are always welcome!
