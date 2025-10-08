@@ -70,8 +70,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="example_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="example_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="example_files/libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="example_files/libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<link href="example_files/libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="example_files/libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 
 
 </head>
@@ -107,7 +107,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Mandatory <code>&lt;icon-name&gt;</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa <span class="dt">&lt;</span><span class="kw">icon-name</span><span class="dt">&gt;</span> &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Optional <code>&lt;group&gt;</code>, <code>&lt;size=...&gt;</code>, and <code>&lt;title=...&gt;</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa <span class="dt">&lt;</span><span class="kw">group</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">icon-name</span><span class="dt">&gt;</span> &lt;size=...&gt; &lt;title=...&gt; &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; fa <span class="dt">&lt;</span><span class="kw">group</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">icon-name</span><span class="dt">&gt;</span> &lt;size=...&gt; &lt;title=...&gt; &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>group</code> defaults to <code>solid</code>.</p></li>
 </ul>
 <p>For example:</p>
 <table class="caption-top table">
@@ -127,30 +128,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i></p></td>
 </tr>
 <tr class="even">
+<td><code>{{&lt; fa solid thumbs-up &gt;}}</code></td>
+<td><p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i></p></td>
+</tr>
+<tr class="odd">
+<td><code>{{&lt; fa regular thumbs-up &gt;}}</code></td>
+<td><p><i class="fa-regular fa-thumbs-up" aria-label="thumbs-up"></i></p></td>
+</tr>
+<tr class="even">
 <td><code>{{&lt; fa folder &gt;}}</code></td>
 <td><p><i class="fa-solid fa-folder" aria-label="folder"></i></p></td>
 </tr>
 <tr class="odd">
+<td><code>{{&lt; fa regular folder &gt;}}</code></td>
+<td><p><i class="fa-regular fa-folder" aria-label="folder"></i></p></td>
+</tr>
+<tr class="even">
+<td><code>{{&lt; fa heart &gt;}}</code></td>
+<td><p><i class="fa-solid fa-heart" aria-label="heart"></i></p></td>
+</tr>
+<tr class="odd">
+<td><code>{{&lt; fa regular heart &gt;}}</code></td>
+<td><p><i class="fa-regular fa-heart" aria-label="heart"></i></p></td>
+</tr>
+<tr class="even">
 <td><code>{{&lt; fa chess-pawn &gt;}}</code></td>
 <td><p><i class="fa-solid fa-chess-pawn" aria-label="chess-pawn"></i></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>{{&lt; fa brands bluetooth &gt;}}</code></td>
 <td><p><i class="fa-brands fa-bluetooth" aria-label="bluetooth"></i></p></td>
 </tr>
-<tr class="odd">
-<td><code>{{&lt; fa brands twitter size=2xl &gt;}}</code> (HTML only)</td>
+<tr class="even">
+<td><code>{{&lt; fa brands twitter size=2xl &gt;}}</code></td>
 <td><p><i class="fa-brands fa-twitter fa-2xl" aria-label="twitter"></i></p></td>
 </tr>
-<tr class="even">
-<td><code>{{&lt; fa brands github size=5x &gt;}}</code> (HTML only)</td>
+<tr class="odd">
+<td><code>{{&lt; fa brands github size=5x &gt;}}</code></td>
 <td><p><i class="fa-brands fa-github fa-5x" aria-label="github"></i></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>{{&lt; fa battery-half size=Huge &gt;}}</code></td>
 <td><p><i class="fa-solid fa-battery-half fa-Huge" aria-label="battery-half"></i></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>{{&lt; fa envelope title="An envelope" &gt;}}</code></td>
 <td><p><i class="fa-solid fa-envelope" title="An envelope" aria-label="envelope"></i></p></td>
 </tr>
@@ -158,8 +179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>Note that the icon sets are currently not perfectly interchangeable across formats:</p>
 <ul>
-<li><code>html</code> uses FontAwesome 6.7.2</li>
-<li><code>pdf</code> uses the <code>fontawesome5</code> package, based on <a href="https://ctan.org/pkg/fontawesome5">FontAwesome 5</a>.</li>
+<li><code>html</code> uses FontAwesome 6.7.2 from &lt;<a href="https://github.com/FortAwesome/Font-Awesome" class="uri">https://github.com/FortAwesome/Font-Awesome</a></li>
+<li><code>pdf</code> uses the <a href="https://ctan.org/pkg/fontawesome6"><code>fontawesome6</code></a> package, based on FontAwesome 6.7.2 too.</li>
 <li>Other formats are currently not supported, but PRs are always welcome!</li>
 </ul>
 <section id="available-icons-reference" class="level2">
@@ -317,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>video</code></td>
 </tr>
 <tr class="odd">
-<td><p><i class="fa-solid fa-shopping-cart" aria-label="shopping-cart"></i></p></td>
+<td><p><i class="fa-solid fa-cart-shopping" aria-label="cart-shopping"></i></p></td>
 <td><code>shopping-cart</code></td>
 <td><p><i class="fa-solid fa-credit-card" aria-label="credit-card"></i></p></td>
 <td><code>credit-card</code></td>
