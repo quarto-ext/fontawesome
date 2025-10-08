@@ -10,12 +10,13 @@ local function ensureHtmlDeps()
   })
 end
 
+local included_font_awesome = false
+
 local function ensure_typst_font_awesome()
-  if included_font_awesome then
-    return
+  if not included_font_awesome then
+    included_font_awesome = true
+    quarto.doc.include_text('in-header', '#import "@preview/fontawesome:0.6.0": *')
   end
-  included_font_awesome = true
-  quarto.doc.include_text("in-header", "#import \"@preview/fontawesome:0.1.0\": *")
 end
 
 local function isEmpty(s)
