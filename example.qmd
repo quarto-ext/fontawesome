@@ -3,9 +3,13 @@ title: Font Awesome Quarto Extension
 format:
    html: default
    pdf: default
+   typst: 
+    output-file: example-typst.pdf
 ---
 
-This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an `{{{< fa >}}}` shortcode:
+This extension allows you to use font-awesome icons in your Quarto HTML, PDF LaTeX, and Typst documents.
+
+It provides an `{{{< fa >}}}` shortcode:
 
 -   Mandatory `<icon-name>`:
 
@@ -47,6 +51,7 @@ Note that the icon sets are currently not perfectly interchangeable across forma
 
 -   `html` uses FontAwesome 6.7.2 from <<https://github.com/FortAwesome/Font-Awesome>
 -   `pdf` uses the [`fontawesome6`](https://ctan.org/pkg/fontawesome6) package, based on FontAwesome 6.7.2 too.
+-   `typst` uses the `typst-fontawesome` package
 -   Other formats are currently not supported, but PRs are always welcome!
 
 ## Available Icons Reference
@@ -138,3 +143,60 @@ For a complete searchable list of all 2,000+ icons, visit the [Font Awesome Icon
 -   Brand icons require the `brands` group: `{{{< fa brands icon-name >}}}`
 -   Regular icons can use the `regular` group: `{{{< fa regular icon-name >}}}`
 -   Solid icons (default) can optionally use `solid` group: `{{{< fa solid icon-name >}}}`
+
+## Sizing Icons
+
+Font Awesome provides relative and literal sizing for icons. When the size is invalid, no size changes are made.
+
+### Relative Sizing^[HTML and Typst formats only]
+
+Usage: `{{{< fa battery-half size=2xl >}}}`
+
+| Relative Sizing Class | Font Size | Equivalent in Pixels |
+|-----------------------|-----------|----------------------|
+| 2xs                   | 0.625em   | 10px                 |
+| xs                    | 0.75em    | 12px                 |
+| sm                    | 0.875em   | 14px                 |
+| lg                    | 1.25em    | 20px                 |
+| xl                    | 1.5em     | 24px                 |
+| 2xl                   | 2em       | 32px                 |
+
+Example: {{< fa heart size=2xs >}} {{< fa heart size=xs >}} {{< fa heart size=sm >}} {{< fa heart >}} {{< fa heart size=lg >}} {{< fa heart size=xl >}} {{< fa heart size=2xl >}}
+
+### Literal Sizing^[HTML and Typst formats only]
+
+Usage: `{{{< fa battery-half size=5x >}}}`
+
+| Literal Sizing Class | Font Size |
+|----------------------|-----------|
+| 1x                   | 1em       |
+| 2x                   | 2em       |
+| 3x                   | 3em       |
+| 4x                   | 4em       |
+| 5x                   | 5em       |
+| 6x                   | 6em       |
+| 7x                   | 7em       |
+| 8x                   | 8em       |
+| 9x                   | 9em       |
+| 10x                  | 10em      |
+
+Example: {{< fa star size=1x >}} {{< fa star size=2x >}} {{< fa star size=3x >}} {{< fa star size=4x >}} {{< fa star size=5x >}} {{< fa star size=6x >}} {{< fa star size=7x >}}
+
+### LaTeX Sizing^[All formats supported]
+
+Usage: `{{{< fa battery-half size=Huge >}}}`
+
+| Sizing Command | LaTeX | HTML & Typst |
+|----------------|-------|--------------|
+| tiny           | 5pt   | 0.5em        |
+| scriptsize     | 7pt   | 0.7em        |
+| footnotesize   | 8pt   | 0.8em        |
+| small          | 9pt   | 0.9em        |
+| normalsize     | 10pt  | 1em          |
+| large          | 12pt  | 1.2em        |
+| Large          | 14.4pt| 1.5em        |
+| LARGE          | 17.28pt| 1.75em      |
+| huge           | 20.74pt| 2em         |
+| Huge           | 24.88pt| 2.5em       |
+
+Example: {{< fa circle size=tiny >}} {{< fa circle size=scriptsize >}} {{< fa circle size=footnotesize >}} {{< fa circle size=small >}} {{< fa circle size=normalsize >}} {{< fa circle size=large >}} {{< fa circle size=Large >}} {{< fa circle size=LARGE >}} {{< fa circle size=huge >}} {{< fa circle size=Huge >}}

@@ -10,6 +10,17 @@ local function ensureHtmlDeps()
   })
 end
 
+local included_font_awesome = false
+
+local function ensure_typst_font_awesome()
+  if not included_font_awesome then
+    included_font_awesome = true
+    quarto.doc.include_text('in-header', '#import "@preview/fontawesome:0.6.0": *')
+    -- Opt-in version 6 for now
+    quarto.doc.include_text('in-header', '#fa-version("6")')
+  end
+end
+
 local function isEmpty(s)
   return s == nil or s == ''
 end
@@ -33,6 +44,51 @@ local function isValidSize(size)
     end
   end
   return ""
+end
+
+local function convert_fa_relative_size(size)
+  -- Map of Font Awesome size names to em values
+  -- Includes both CSS sizes (2xs, xs, sm, lg, xl, 2xl, 1x-10x)
+  -- and LaTeX sizes (tiny, scriptsize, etc.)
+  local sizeMap = {
+    -- Font Awesome CSS relative sizes
+    ["2xs"] = "0.625em",
+    ["xs"] = "0.75em",
+    ["sm"] = "0.875em",
+    ["lg"] = "1.25em",
+    ["xl"] = "1.5em",
+    ["2xl"] = "2em",
+    -- Font Awesome CSS multiplier sizes
+    ["1x"] = "1em",
+    ["2x"] = "2em",
+    ["3x"] = "3em",
+    ["4x"] = "4em",
+    ["5x"] = "5em",
+    ["6x"] = "6em",
+    ["7x"] = "7em",
+    ["8x"] = "8em",
+    ["9x"] = "9em",
+    ["10x"] = "10em",
+    -- LaTeX size names (matches latex-fontsize.css for consistency)
+    ["tiny"] = "0.5em",
+    ["scriptsize"] = "0.7em",
+    ["footnotesize"] = "0.8em",
+    ["small"] = "0.9em",
+    ["normalsize"] = "1em",
+    ["large"] = "1.2em",
+    ["Large"] = "1.5em",
+    ["LARGE"] = "1.75em",
+    ["huge"] = "2em",
+    ["Huge"] = "2.5em"
+  }
+
+  -- Check if size is in the map
+  if sizeMap[size] then
+    return sizeMap[size]
+  end
+
+  -- If not found, ignore size
+  return ''
 end
 
 return {
@@ -82,6 +138,33 @@ return {
       else
         return pandoc.RawInline('tex', "{\\" .. size .. icons .. "}")
       end
+    -- detect typst
+    elseif quarto.doc.is_format("typst") then
+      ensure_typst_font_awesome()
+
+      -- Build array of parameters for fa-icon()
+      local params = {'"' .. icon .. '"'}
+
+      -- Add size parameter if specified and valid
+      local sizeValue = convert_fa_relative_size(size)
+      if not isEmpty(sizeValue) then
+        table.insert(params, "size: " .. sizeValue)
+      end
+
+      -- Add solid parameter based on group
+      if group == "regular" then
+        table.insert(params, "solid: false")
+      elseif group == "solid" then
+        table.insert(params, "solid: true")
+      end
+
+      -- Join parameters with comma-space separator
+      local iconContent = table.concat(params, ", ")
+
+      return pandoc.RawInline(
+        'typst',
+        '#fa-icon(' .. iconContent .. ')'
+      )
     else
       return pandoc.Null()
     end
